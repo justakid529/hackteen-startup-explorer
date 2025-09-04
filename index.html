@@ -1,13 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="Styles/Stylesheet.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyOne – Tudo para seus trabalhos em um só lugar</title>
+  <meta name="description" content="Gerador ABNT, formatação automática, ideias de temas, planner de provas e mais — tudo em um único site para estudantes." />
+  <link rel="stylesheet" href="Styles/Stylesheet.css">
 </head>
 <body>
-    
-</body>
-<script src="Script/script.Js" ></script>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>StudyOne</h1>
+      </div>
+      <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
+      <nav class="navlinks" aria-label="Navegação primária">
+        <a href="#Ferramentas">Ferramentas</a>
+        <a href="#solucao">Solução</a>
+        <a href="#features">Ferramentas</a>
+        <a href="#exemplo">Exemplo</a>
+      </nav>
+      <a class="cta" href="#comecar">Testar agora</a>
+      <label class="burger" for="menuToggle" aria-label="Abrir menu mobile"><span></span></label>
+    </div>
+    <div class="container mobile">
+      <a href="#problema" onclick="document.getElementById('menuToggle').checked=false">Problema</a>
+      <a href="#solucao" onclick="document.getElementById('menuToggle').checked=false">Solução</a>
+      <a href="#features" onclick="document.getElementById('menuToggle').checked=false">Ferramentas</a>
+      <a href="#exemplo" onclick="document.getElementById('menuToggle').checked=false">Exemplo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <span class="badge"><span class="dot"></span> Feito para estudantes apressados</span>
+          <h2 class="h1">Formatação, referências e ideias — <em>sem dor de cabeça</em>.</h2>
+          <p class="lead">Um site único que ajuda você a gerar referências em ABNT/APA, formatar o trabalho e ainda dar aquele empurrãozinho com temas, resumos e flashcards.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#comecar">Começar de graça</a>
+            <a class="btn" href="#features">Ver ferramentas</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="screen" role="img" aria-label="Prévia do editor formatando um trabalho automaticamente">
+            <div class="codebar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <pre>
+              
+        </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script src="Script/script.Js">
+
+</script>
+
 </html>
