@@ -1,0 +1,104 @@
+:root{
+      --bg: #0b0f19;
+      --card: #111726;
+      --soft: #1a2236;
+      --brand: #6c8cff;
+      --brand-2: #7cf0ff;
+      --text: #e7ecf3;
+      --muted: #9fb1c7;
+      --success: #34d399;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+      --radius-xl: 20px;
+      --radius-2xl: 28px;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:linear-gradient(180deg, #0b0f19 0%, #0d1220 100%); color:var(--text); font-family:Inter,system-ui,Segoe UI,Roboto,Arial,Helvetica,sans-serif;}
+    a{color:inherit; text-decoration:none}
+    .container{width:100%; max-width:1200px; margin-inline:auto; padding:0 24px}
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px);
+      background:rgba(11,15,25,.6); border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:36px; height:36px; border-radius:12px; background:conic-gradient(from 180deg, var(--brand), var(--brand-2), var(--brand)); box-shadow:0 6px 18px rgba(124,240,255,.35)}
+    .brand h1{font-size:18px; margin:0; letter-spacing:.2px}
+    .navlinks{display:flex; gap:14px; align-items:center}
+    .navlinks a{padding:10px 14px; border-radius:12px; color:var(--muted)}
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .cta{background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#051018; padding:10px 16px; border-radius:14px; font-weight:700; box-shadow:0 8px 20px rgba(108,140,255,.25)}
+
+    /* Mobile menu (CSS-only) */
+    #menuToggle{display:none}
+    .burger{display:none; width:40px; height:40px; place-items:center; border-radius:12px; background:#12182a; border:1px solid rgba(255,255,255,.08)}
+    .burger span{width:20px; height:2px; background:#d7e3f7; display:block; position:relative}
+    .burger span::before, .burger span::after{content:""; position:absolute; left:0; right:0; height:2px; background:#d7e3f7}
+    .burger span::before{top:-6px} .burger span::after{top:6px}
+    .mobile{display:none; flex-direction:column; gap:8px; padding:12px}
+    #menuToggle:checked ~ .mobile{display:flex}
+    .mobile a{padding:12px 14px; border-radius:12px; color:var(--muted); background:#0f1526; border:1px solid rgba(255,255,255,.06)}
+
+    /* Hero */
+    .hero{padding:56px 0 24px}
+    .hero-card{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; background:linear-gradient(180deg, #0e1528, #0b0f19); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius-2xl); box-shadow:var(--shadow); overflow:hidden}
+    .hero-copy{padding:40px}
+    .badge{display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border-radius:999px; background:#0f1a31; color:#b9c7dd; border:1px solid rgba(255,255,255,.08)}
+    .badge .dot{width:8px; height:8px; border-radius:50%; background:linear-gradient(90deg, var(--brand), var(--brand-2))}
+    .h1{font-size:42px; line-height:1.05; margin:14px 0 12px; font-weight:800}
+    .lead{color:#b7c6dc; font-size:18px; margin:0 0 18px}
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; border:1px solid rgba(255,255,255,.08); background:#12182a; color:#dfe9fb; font-weight:600}
+    .btn.primary{background:linear-gradient(90deg, var(--brand), var(--brand-2)); color:#06101a}
+    .hero-visual{position:relative; padding:24px; background:radial-gradient(1200px 400px at 60% -10%, rgba(124,240,255,.15), transparent 60%)}
+    .screen{height:100%; min-height:320px; border-radius:18px; border:1px solid rgba(255,255,255,.08); background:#0b1120; padding:16px; box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+    .codebar{display:flex; gap:6px; margin-bottom:12px}
+    .dot{width:10px; height:10px; border-radius:50%}
+    .dot.red{background:#ff5f56} .dot.yellow{background:#ffbd2e} .dot.green{background:#27c93f}
+    .screen pre{margin:0; white-space:pre-wrap; word-break:break-word; font: 500 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; color:#c9d7ff}
+
+    /* Sections */
+    section{padding:36px 0}
+    .eyebrow{color:var(--brand-2); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:12px; margin-bottom:10px}
+    .title{font-size:28px; margin:0 0 10px}
+    .muted{color:var(--muted)}
+
+    .grid{display:grid; gap:16px}
+    .grid-3{grid-template-columns:repeat(3, 1fr)}
+    .grid-2{grid-template-columns:repeat(2, 1fr)}
+
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius-xl); padding:18px; box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 6px; font-size:18px}
+    .tag{display:inline-block; padding:6px 10px; border-radius:999px; font-size:12px; color:#0a162a; background:linear-gradient(90deg, var(--brand), var(--brand-2)); font-weight:800}
+
+    .list{display:grid; gap:10px; margin:12px 0 0; padding:0; list-style:none}
+    .list li{display:flex; gap:10px; align-items:flex-start}
+    .check{width:22px; height:22px; border-radius:7px; background:#0f1a31; border:1px solid rgba(255,255,255,.08); display:grid; place-items:center}
+    .check::after{content:"✔"; font-size:12px; color:#9be7ff}
+
+    /* CTA band */
+    .cta-band{margin:28px 0; padding:20px; background:linear-gradient(90deg, rgba(108,140,255,.2), rgba(124,240,255,.2)); border:1px solid rgba(255,255,255,.12); border-radius:var(--radius-2xl); display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .cta-band .left{display:flex; flex-direction:column; gap:6px}
+
+    /* Footer */
+    footer{padding:36px 0 56px; color:#8ba0bb}
+    footer .row{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
+    .tiny{font-size:12px; opacity:.8}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .navlinks{display:none}
+      .burger{display:grid}
+      .hero-card{grid-template-columns:1fr}
+      .hero-copy{padding:28px}
+      .grid-3{grid-template-columns:repeat(2, 1fr)}
+    }
+    @media (max-width: 620px){
+      .h1{font-size:30px}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .cta-band{flex-direction:column; align-items:flex-start}
+    }
