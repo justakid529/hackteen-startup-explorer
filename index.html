@@ -1,13 +1,169 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="Styles/Stylesheet.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyOne – Todos os sites para seus trabalhos em um só lugar</title>
+  <meta name="description" content="Gerador ABNT, formatação automática, ideias de temas, planner de provas e mais — tudo em um único site para estudantes." />
+  <link rel="stylesheet" href="Styles/Stylesheet.css">
+  <link rel="icon" href="Assets/ChatGPT Image 4 de set. de 2025, 22_58_43.png" style="scale: 1.5;">
 </head>
 <body>
-    
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>StudyOne</h1>
+      </div>
+      <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
+      <nav class="navlinks" aria-label="Navegação primária">
+        <a href="#problema">Problema</a>
+        <a href="#solucao">Solução</a>
+        <a href="#features">Ferramentas</a>
+        <a href="#exemplo">Exemplo</a>
+      </nav>
+      <a class="cta" href="#comecar">Testar agora</a>
+      <label class="burger" for="menuToggle" aria-label="Abrir menu mobile"><span></span></label>
+    </div>
+    <div class="container mobile">
+      <a href="#problema" onclick="document.getElementById('menuToggle').checked=false">Problema</a>
+      <a href="#solucao" onclick="document.getElementById('menuToggle').checked=false">Solução</a>
+      <a href="#features" onclick="document.getElementById('menuToggle').checked=false">Ferramentas</a>
+      <a href="#exemplo" onclick="document.getElementById('menuToggle').checked=false">Exemplo</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero container">
+      <div class="hero-card">
+        <div class="hero-copy">
+          <span class="badge"><span class="dot"></span> Feito para estudantes apressados</span>
+          <h2 class="h1">Formatação, referências e ideias — <em>sem dor de cabeça</em>.</h2>
+          <p class="lead">Um site único que ajuda você a achar o programa perfeito para seu trabalho/sua atividade! </p>
+          <div class="hero-actions">
+            <a class="btn" href="#features">Ver ferramentas</a>
+            <div logo-right>
+            <img src="Assets/ChatGPT Image 4 de set. de 2025, 22_58_43.png" alt="Logo photo" style="
+            position: absolute;
+            right: 0px;   
+            top: 150px;
+            left: 500px;
+            transform: translateY(-50%);
+            scale: 0.5;
+            ">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section id="problema" class="container">
+      <p class="eyebrow">Problema</p>
+      <h2 class="title">Estudantes perdem tempo com burocracia em vez de conteúdo</h2>
+      <p class="muted">Normas (ABNT), referências, capa, sumário… e quando falta ideia, tudo trava. Hoje é preciso usar vários sites diferentes e ainda assim nada fica padronizado.</p>
+
+      <div class="grid grid-3" style="margin-top:14px">
+        <div class="card"><span class="tag">Tempo</span>
+          <h3>Formatação demorada</h3>
+          <p class="muted">Margens, fontes, espaçamentos e títulos exigem atenção que poderia estar no conteúdo.</p>
+        </div>
+        <div class="card"><span class="tag">Confusão</span>
+          <h3>Formatação e Organização</h3>
+          <p class="muted">Não ter aonde formatar o arquivo e organizar seu projeto</p>
+        </div>
+        <div class="card"><span class="tag">Foco</span>
+          <h3>Falta de ideias</h3>
+          <p class="muted">Sem um ponto de partida, fica difícil escrever e organizar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÃO -->
+    <section id="solucao" class="container">
+      <p class="eyebrow">Solução</p>
+      <h2 class="title">Tudo em um só lugar — simples, rápido e padronizado</h2>
+      <ul class="list">
+        <li><span class="check"></span><span><strong>Sites ABNT</strong> (ABNT, APA, etc.) com validação por tipo de fonte.</span></li>
+        <li><span class="check"></span><span><strong>Formatação automática</strong> Sites que formatam pra você gratuitamente</span></li>
+        <li><span class="check"></span><span><strong>Modelos prontos</strong> de trabalhos e redações para iniciar sem travar.</span></li>
+        <li><span class="check"></span><span><strong>Planner de provas e entregas</strong> com lembretes.</span></li>
+        <li><span class="check"></span><span><strong>Resumos e flashcards</strong> para revisão rápida.</span></li>
+      </ul>
+    </section>
+
+    <!-- FERRAMENTAS / FEATURES -->
+    <section id="features" class="container">
+      <p class="eyebrow">Ferramentas</p>
+      <h2 class="title">O kit completo do estudante</h2>
+      <div class="grid grid-3" style="margin-top:12px">
+        <article class="card">
+          <h3>Referências ABNT</h3>
+          <p class="muted">Disponibilizamos sites para acertar seu arquivo/texto em 1 clique!</p>
+        </article>
+        <article class="card">
+          <h3>Formatação 1‑clique</h3>
+          <p class="muted">Capa, sumário, estilos e margens seguindo normas — sem dor.</p>
+        </article>
+        <article class="card">
+          <h3>Modelos e ideias</h3>
+          <p class="muted">Sugestões de temas e estruturas para você começar rápido.</p>
+        </article>
+        <article class="card">
+          <h3>Planner & lembretes</h3>
+          <p class="muted">Organize provas e entregas e receba alertas.</p>
+        </article>
+        <article class="card">
+          <h3>Resumos e flashcards</h3>
+          <p class="muted">Transforme tópicos em material de revisão.</p>
+        </article>
+        <article class="card">
+          <h3>Modo professor</h3>
+          <p class="muted">Rubricas, padronização e checagem de similaridade para correções mais rápidas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXEMPLO PRÁTICO -->
+    <section id="exemplo" class="container">
+      <p class="eyebrow">Exemplo prático</p>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Como seria a entrega perfeita</h3>
+          <ol class="muted" style="margin:8px 0 0; padding-left:18px">
+            <li>Gerar referências ABNT a partir das fontes.</li>
+            <li>Aplicar formatação automática no texto.</li>
+            <li>Usar um modelo com capa, sumário e conclusão.</li>
+            <li>Revisar com resumos e flashcards.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Resultado</h3>
+          <p class="muted">O aluno foca no conteúdo, enquanto o site resolve a burocracia. O professor recebe tudo padronizado e consegue corrigir mais rápido.</p>
+          <div class="cta-band" id="comecar">
+            <div class="left">
+              <strong>Pronto para testar?</strong>
+              <span class="muted">Abra o protótipo e veja as ferramentas em ação.</span>
+            </div>
+            <a class="btn primary" href="#">Abrir protótipo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container row">
+      <span class="tiny">2025 StudyOne. Feito no HackTeen.</span>
+      <span class="tiny"></span>
+    </div>
+  </footer>
 </body>
-<script src="Script/script.Js" ></script>
+
+<script src="script.js">
+
+</script>
+
 </html>
