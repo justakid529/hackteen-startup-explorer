@@ -421,6 +421,13 @@
     margin-bottom: 40px;
     color: var(--text);
   }
+  .small-info {
+     font-size: 14px;
+    font-weight: 500;
+    /*text-align: center;*/
+    margin-bottom: 40px;
+    color: var(--muted);
+  }
 
   .service-card {
     background: var(--card);
@@ -472,4 +479,67 @@
     gap: 20px;
     margin-top: 20px;
     justify-content: center; /* centraliza a linha com menos itens */
+  }
+    .services-list {
+    display: flex;
+    flex-direction: column; /* deixa os itens em coluna */
+    gap: 20px; /* espaço entre cada card */
+  }
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .service-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .service-line:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0,0,0,.35);
+    background-color: rgba(255,255,255,.06);
+  }
+
+  .service-info {
+    flex: 1;
+  }
+
+  .service-info .service-name {
+    font-size: 18px;
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+
+  .service-info .service-desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .service-side {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .service-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+
+  .service-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--brand-2);
   }
