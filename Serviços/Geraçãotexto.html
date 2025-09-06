@@ -29,11 +29,20 @@
       <a href="#exemplo" onclick="document.getElementById('menuToggle').checked=false">Exemplo</a>
     </div>
   </header>
- <section class="services container">
+<section class="services container">
+  <div class="services-header">
     <h2 class="services-title">Sites de Produção de texto</h2>
+    
+    <button class="main-btn" onclick="window.location.href='novo-serviço.html'">
+  Adicionar Serviço
+</button>
+
+  </div>
+  <div style="text-align: right; margin: 10px 0;">
+  <button id="resetBtn" class="grey-btn">Resetar lista</button>
+</div>
+
     <h6 class="small-info">*Avaliações feitas pelos Donos do site</h6>
-    
-    
     <div class="services-list">
     <a href="https://chatgpt.com">
       <div class="service-line">
@@ -100,6 +109,9 @@
       </div>
       </a>
     </div>
+    <h6 class="small-info">*Alem dos 5 iniciais, nenhum serviço que o usuario coloca aparece para os outros, por ser um site sem API e Backend</h6>
   </section>
+  
+  <script src="/Script/script.Js"></script>
 </body>
 </html>

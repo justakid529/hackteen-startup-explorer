@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novo Serviço</title>
+  <link rel="stylesheet" href="/Styles/Stylesheet.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="services-title">Adicionar Novo Serviço</h2>
+    <form class="service-form" id="serviceForm" action="Geraçãotexto.html">
+      
+      <label>Nome do Serviço:</label>
+      <input type="text" name="nome" id="nome" placeholder="Ex: ChatGPT" maxlength="20" required>
+
+      <label>Nota (apenas número):</label>
+      <input type="number" name="nota" id="nota" min="0" max="10" placeholder="Ex: 8" required>
+
+      <label>Descrição:</label>
+      <textarea name="descricao" id="descricao" placeholder="Explique o que o serviço faz" minlength="30" required></textarea>
+
+      <label>Link do Serviço:</label>
+      <input type="url" name="link" id="link" placeholder="https://exemplo.com" required>
+
+      <label>Logo (URL da imagem):</label>
+      <input type="url" name="logo" id="logo" placeholder="Ex: https://meusite.com/imagem.png" required>
+
+      <label>Preço:</label>
+      <input type="text" name="preco" id="preco" placeholder="Ex: Grátis ou R$9,90" required>
+
+      <label>Categoria:</label>
+      <Select required style="width: 200px;" class="Select1">
+        <option value="Produção de Texto">Produção de Texto</option>
+        <option value="Imagens">Imagens</option>
+        <option value="Organização">Organização</option>
+        <option value="Formatação">Formatação</option>
+        <option value="Estudar">Estudar</option>
+      </Select>
+      <br>
+      <button type="submit" class="main-btn">Salvar</button>
+    </form>
+  </div>
+
+  <script src="/Script/script.Js">
+
+  </script>
+</body>
+</html>
