@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços</title>
+  <link rel="stylesheet" href="/Styles/Stylesheet.css">
+</head>
+<body>
+    <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>StudyOne</h1>
+      </div>
+      <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
+      <nav class="navlinks" aria-label="Navegação primária">
+        <a href="Serviços.html">Ferramentas</a>
+        <a href="#solucao">Solução</a>
+        <a href="#features">Ferramentas</a>
+        <a href="#exemplo">Exemplo</a>
+      </nav>
+      <label class="burger" for="menuToggle" aria-label="Abrir menu mobile"><span></span></label>
+    </div>
+    <div class="container mobile">
+      <a href="#problema" onclick="document.getElementById('menuToggle').checked=false">Problema</a>
+      <a href="#solucao" onclick="document.getElementById('menuToggle').checked=false">Solução</a>
+      <a href="#features" onclick="document.getElementById('menuToggle').checked=false">Ferramentas</a>
+      <a href="#exemplo" onclick="document.getElementById('menuToggle').checked=false">Exemplo</a>
+    </div>
+  </header>
+<section class="services container">
+  <div class="services-header">
+    <h2 class="services-title">Sites de Formatação Acadêmica (ABNT)</h2>
+    
+    <button class="main-btn" onclick="window.location.href='novo-serviço.html'">
+      Adicionar Serviço
+    </button>
+  </div>
+
+  <div style="text-align: right; margin: 10px 0;">
+    <button id="resetBtnFormat" class="grey-btn">Resetar lista</button>
+  </div>
+
+  <h6 class="small-info">*Avaliações feitas pelos Donos do site</h6>
+  <div class="services-list">
+    <a href="https://www.mettzer.com">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Mettzer | 9/10</h3>
+          <p class="service-desc">Formatação automática de trabalhos acadêmicos no padrão ABNT</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/mettzer.png" class="service-logo" alt="Mettzer">
+          <span class="service-price">Grátis (limitado) / Pago opcional</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://fastformat.com.br">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">FastFormat | 8/10</h3>
+          <p class="service-desc">Gera referências e citações em ABNT rapidamente</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/fastformat.png" class="service-logo" alt="FastFormat">
+          <span class="service-price">Grátis (limitado) / Pago opcional</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://menthor.co">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Menthor | 8/10</h3>
+          <p class="service-desc">Criação de referências bibliográficas de forma automática</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/menthor.png" class="service-logo" alt="ABNTcite">
+          <span class="service-price">Grátis / Pago opcional</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.trakto.io">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Trakto | 9/10</h3>
+          <p class="service-desc">Modelos de trabalhos e documentos já formatados em ABNT</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/trakto.png" class="service-logo" alt="Trakto">
+          <span class="service-price">Grátis (limitado) / Pago opcional</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.mybib.com">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">MyBib | 7/10</h3>
+          <p class="service-desc">Rápido para gerar referências, mas limitado a citações e bibliografia, não formata todo o trabalho.</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/mybib.png" class="service-logo" alt="OrtoBib">
+          <span class="service-price">Grátis / Pago opcional</span>
+        </div>
+      </div>
+    </a>
+  </div>
+  <h6 class="small-info">*Alem dos 5 iniciais, nenhum serviço que o usuário adiciona aparece para os outros, por ser um site sem API e Backend</h6>
+</section>
+
+
+  
+  <script src="/Script/script.Js"></script>
+</body>
+</html>
