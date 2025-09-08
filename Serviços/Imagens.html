@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços</title>
+  <link rel="stylesheet" href="/Styles/Stylesheet.css">
+</head>
+<body>
+    <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>StudyOne</h1>
+      </div>
+      <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
+      <nav class="navlinks" aria-label="Navegação primária">
+        <a href="Serviços.html">Ferramentas</a>
+        <a href="#solucao">Solução</a>
+        <a href="#features">Ferramentas</a>
+        <a href="#exemplo">Exemplo</a>
+      </nav>
+      <label class="burger" for="menuToggle" aria-label="Abrir menu mobile"><span></span></label>
+    </div>
+    <div class="container mobile">
+      <a href="#problema" onclick="document.getElementById('menuToggle').checked=false">Problema</a>
+      <a href="#solucao" onclick="document.getElementById('menuToggle').checked=false">Solução</a>
+      <a href="#features" onclick="document.getElementById('menuToggle').checked=false">Ferramentas</a>
+      <a href="#exemplo" onclick="document.getElementById('menuToggle').checked=false">Exemplo</a>
+    </div>
+  </header>
+<section class="services container">
+  <div class="services-header">
+    <h2 class="services-title">Sites de Editar/Gerar imagens</h2>
+    
+    <button class="main-btn" onclick="window.location.href='novo-serviço.html'">
+  Adicionar Serviço
+</button>
+
+  </div>
+  <div style="text-align: right; margin: 10px 0;">
+  <button id="resetBtn" class="grey-btn">Resetar lista</button>
+</div>
+
+    <h6 class="small-info">*Avaliações feitas pelos Donos do site</h6>
+    <div class="services-list">
+    <a href="https://www.canva.com">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Canva | 10/10</h3>
+          <p class="service-desc">Editor intuitivo, com muitos modelos e recursos fáceis</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/canva.png" class="service-logo" alt="Texto">
+          <span class="service-price">Grátis (pago opcional)</span>
+        </div>
+      </div>
+      </a>
+      
+      <a href="https://www.fotor.com">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Fotor | 8/10</h3>
+          <p class="service-desc">Edição simples, filtros prontos e criação de colagens</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/fotor.webp" class="service-logo" alt="Imagens">
+          <span class="service-price">Grátis (pago opcional)</span>
+        </div>
+      </div>
+      </a>
+
+      <a href="https://pixlr.com/br">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Pixlr | 8/10</h3>
+          <p class="service-desc">Editor online avançado, bem parecido com Photoshop</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/pix.png" class="service-logo" alt="Organização">
+          <span class="service-price">Grátis (pago opcional)</span>
+        </div>
+      </div>
+      </a>
+
+      <a href="https://www.adobe.com/br/express">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Adobe Express | 9/10</h3>
+          <p class="service-desc">Ideal para posts, banners e design rápido online</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/Adobe.png" class="service-logo" alt="Formatação">
+          <span class="service-price">Grátis (pago opcional)</span>
+        </div>
+      </div>
+      </a>
+
+      <a href="https://www.remove.bg/pt-br">
+      <div class="service-line">
+        <div class="service-info">
+          <h3 class="service-name">Remove.bg | 8/10</h3>
+          <p class="service-desc">Remove fundos automaticamente com ótima precisão</p>
+        </div>
+        <div class="service-side">
+          <img src="/Assets/Remove.bg.png" class="service-logo" alt="Estudar" style="scale: 1;">
+          <span class="service-price">Grátis (pago opcional)</span>
+        </div>
+      </div>
+      </a>
+    </div>
+    <h6 class="small-info">*Alem dos 5 iniciais, nenhum serviço que o usuario coloca aparece para os outros, por ser um site sem API e Backend</h6>
+  </section>
+  
+  <script src="/Script/script.Js"></script>
+</body>
+</html>
