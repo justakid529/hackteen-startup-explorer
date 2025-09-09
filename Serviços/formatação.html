@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serviços</title>
+  <title>Serviços - Formatação</title>
   <link rel="stylesheet" href="/Styles/Stylesheet.css">
+  <link rel="icon" href="/Assets/ChatGPT Image 4 de set. de 2025, 22_58_43.png" style="scale: 1.5;">
 </head>
 <body>
     <header>
     <div class="container nav">
+      <a href="/index.html">
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <h1>StudyOne</h1>
       </div>
+      </a>
       <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
       <nav class="navlinks" aria-label="Navegação primária">
-        <a href="Serviços.html">Ferramentas</a>
-        <a href="#solucao">Solução</a>
+        <a href="/Serviços.html">Ferramentas</a>
+        <a href="/Sobre.html">Sobre Nós</a>
         <a href="#features">Ferramentas</a>
         <a href="#exemplo">Exemplo</a>
       </nav>
@@ -31,7 +34,7 @@
   </header>
 <section class="services container">
   <div class="services-header">
-    <h2 class="services-title">Sites de Formatação Acadêmica (ABNT)</h2>
+    <h2 class="services-title" data-categoria="format">Sites de formatação acadêmica</h2>
     
     <button class="main-btn" onclick="window.location.href='novo-serviço.html'">
       Adicionar Serviço
@@ -39,7 +42,7 @@
   </div>
 
   <div style="text-align: right; margin: 10px 0;">
-    <button id="resetBtnFormat" class="grey-btn">Resetar lista</button>
+    <button id="resetBtn" class="grey-btn">Resetar lista</button>
   </div>
 
   <h6 class="small-info">*Avaliações feitas pelos Donos do site</h6>
@@ -114,6 +117,9 @@
 
 
   
-  <script src="/Script/script.Js"></script>
+  <script src="/Script/script.js"></script>
+<script>
+  carregarServicos("format");
+</script>
 </body>
 </html>

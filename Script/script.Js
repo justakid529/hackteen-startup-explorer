@@ -1,66 +1,80 @@
-document.addEventListener("DOMContentLoaded", () => {
- 
-  const form = document.getElementById("serviceForm");
-  if (form) {
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
+// ------- Salvar novo serviço --------
+document.getElementById("serviceForm")?.addEventListener("submit", function(event) {
+  event.preventDefault();
 
-      const nome = document.getElementById("nome").value.trim();
-      const nota = document.getElementById("nota").value.trim();
-      const descricao = document.getElementById("descricao").value.trim();
-      const logo = document.getElementById("logo").value.trim();
-      const preco = document.getElementById("preco").value.trim();
-      const categoria = document.querySelector(".Select1").value;
-      const link = document.getElementById("link").value.trim();
+  const categoria = document.getElementById("categoria").value;
+  const chave = "services_" + categoria;
 
-      const novoServico = { nome, nota, descricao, logo, preco, categoria, link };
+  const novoServico = {
+    nome: document.getElementById("nome").value,
+    descricao: document.getElementById("descricao").value,
+    preco: document.getElementById("preco").value,
+    nota: document.getElementById("nota").value,
+    link: document.getElementById("link").value,
+    logo: document.getElementById("logo").value
+  };
 
-      let servicos = JSON.parse(localStorage.getItem("servicos")) || [];
-      servicos.push(novoServico);
-      localStorage.setItem("servicos", JSON.stringify(servicos));
+  let lista = JSON.parse(localStorage.getItem(chave)) || [];
+  lista.push(novoServico);
+  localStorage.setItem(chave, JSON.stringify(lista));
 
-      alert("✅ Serviço adicionado com sucesso!");
-      window.location.href = "geraçãotexto.html";
-    });
+  // 🔥 redireciona para a página correta
+  switch (categoria) {
+    case "texto":
+      window.location.href = "Geraçãotexto.html"; // Produção de Texto
+      break;
+    case "imagem":
+      window.location.href = "Imagens.html";
+      break;
+    case "org":
+      window.location.href = "Organização.html";
+      break;
+    case "format":
+      window.location.href = "Formatação.html";
+      break;
+    case "estudo":
+      window.location.href = "Estudar.html";
+      break;
   }
+});
 
-  //lista
-  const lista = document.querySelector(".services-list");
-  if (lista) {
-    let servicos = JSON.parse(localStorage.getItem("servicos")) || [];
+// ------- Carregar serviços salvos --------
+function carregarServicos(categoria) {
+  const chave = "services_" + categoria;
+  const lista = JSON.parse(localStorage.getItem(chave)) || [];
+  const container = document.querySelector(".services-list");
 
-    servicos.forEach(s => {
-      if (s.categoria === "Produção de Texto") {
-        const item = document.createElement("a");
-        item.href = s.link;
-        item.target = "_blank";
+  if (!container) return;
 
-        item.innerHTML = `
-          <div class="service-line">
-            <div class="service-info">
-              <h3 class="service-name">${s.nome} | ${s.nota}/10</h3>
-              <p class="service-desc">${s.descricao}</p>
-            </div>
-            <div class="service-side">
-              <img src="${s.logo}" class="service-logo" alt="${s.nome}">
-              <span class="service-price">${s.preco}</span>
-            </div>
-          </div>
-        `;
+  lista.forEach(servico => {
+    const a = document.createElement("a");
+    a.href = servico.link;
 
-        lista.appendChild(item);
-      }
-    });
-  }
+    const div = document.createElement("div");
+    div.className = "service-line";
 
-  //reset
-  const resetBtn = document.getElementById("resetBtn");
-  if (resetBtn) {
-    resetBtn.addEventListener("click", () => {
-      if (confirm("⚠️ Isso vai apagar os serviços adicionados. Deseja continuar?")) {
-        localStorage.removeItem("servicos");
-        location.reload(); // recarrega a página só com os 5 iniciais
-      }
-    });
-  }
+    div.innerHTML = `
+      <div class="service-info">
+        <h3 class="service-name">${servico.nome} | ${servico.nota}/10</h3>
+        <p class="service-desc">${servico.descricao}</p>
+      </div>
+      <div class="service-side">
+        <img src="${servico.logo}" class="service-logo" alt="${servico.nome}">
+        <span class="service-price">${servico.preco}</span>
+      </div>
+    `;
+
+    a.appendChild(div);
+    container.appendChild(a);
+  });
+}
+
+// ------- Resetar lista --------
+document.getElementById("resetBtn")?.addEventListener("click", function() {
+  const categoria = document.querySelector(".services-title")?.dataset.categoria;
+  if (!categoria) return;
+
+  const chave = "services_" + categoria;
+  localStorage.removeItem(chave);
+  location.reload();
 });
