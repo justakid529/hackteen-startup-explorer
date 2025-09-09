@@ -30,7 +30,6 @@
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: url('https://i.imgur.com/8Km9tLL.png'); /* textura de ruído leve */
   opacity: 0.03;
   pointer-events: none;
 }
