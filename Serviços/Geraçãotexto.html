@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serviços</title>
+  <title>Serviços - Geração de Texto</title>
   <link rel="stylesheet" href="/Styles/Stylesheet.css">
+  <link rel="icon" href="/Assets/ChatGPT Image 4 de set. de 2025, 22_58_43.png" style="scale: 1.5;">
 </head>
 <body>
     <header>
     <div class="container nav">
+      <a href="/index.html">
       <div class="brand">
         <div class="logo" aria-hidden="true"></div>
         <h1>StudyOne</h1>
       </div>
+      </a>
       <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
       <nav class="navlinks" aria-label="Navegação primária">
-        <a href="Serviços.html">Ferramentas</a>
-        <a href="#solucao">Solução</a>
+        <a href="/Serviços.html">Ferramentas</a>
+        <a href="/Sobre.html">Sobre Nós</a>
         <a href="#features">Ferramentas</a>
         <a href="#exemplo">Exemplo</a>
       </nav>
@@ -31,7 +34,8 @@
   </header>
 <section class="services container">
   <div class="services-header">
-    <h2 class="services-title">Sites de Produção de texto</h2>
+    <h2 class="services-title" data-categoria="texto">Sites de Produção de Texto</h2>
+
     
     <button class="main-btn" onclick="window.location.href='novo-serviço.html'">
   Adicionar Serviço
@@ -112,6 +116,9 @@
     <h6 class="small-info">*Alem dos 5 iniciais, nenhum serviço que o usuario coloca aparece para os outros, por ser um site sem API e Backend</h6>
   </section>
   
-  <script src="/Script/script.Js"></script>
+  <script src="/Script/script.js"></script>
+<script>
+  carregarServicos("texto");
+</script>
 </body>
 </html>

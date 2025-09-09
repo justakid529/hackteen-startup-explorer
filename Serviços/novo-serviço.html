@@ -3,13 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Novo Serviço</title>
+  <title>Novo Serviço - Novo Serviço</title>
   <link rel="stylesheet" href="/Styles/Stylesheet.css">
+  <link rel="icon" href="/Assets/ChatGPT Image 4 de set. de 2025, 22_58_43.png" style="scale: 1.5;">
 </head>
 <body>
+  <header>
+    <div class="container nav">
+      <a href="/index.html">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>StudyOne</h1>
+      </div>
+      </a>
+      <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
+      <nav class="navlinks" aria-label="Navegação primária">
+        <a href="/Serviços.html">Ferramentas</a>
+        <a href="/Sobre.html">Sobre Nós</a>
+        <a href="#features">Ferramentas</a>
+        <a href="#exemplo">Exemplo</a>
+      </nav>
+      <label class="burger" for="menuToggle" aria-label="Abrir menu mobile"><span></span></label>
+    </div>
+    <div class="container mobile">
+      <a href="#problema" onclick="document.getElementById('menuToggle').checked=false">Problema</a>
+      <a href="#solucao" onclick="document.getElementById('menuToggle').checked=false">Solução</a>
+      <a href="#features" onclick="document.getElementById('menuToggle').checked=false">Ferramentas</a>
+      <a href="#exemplo" onclick="document.getElementById('menuToggle').checked=false">Exemplo</a>
+    </div>
+  </header>
   <div class="container">
     <h2 class="services-title">Adicionar Novo Serviço</h2>
-    <form class="service-form" id="serviceForm" action="Geraçãotexto.html">
+    <form class="service-form" id="serviceForm">
       
       <label>Nome do Serviço:</label>
       <input type="text" name="nome" id="nome" placeholder="Ex: ChatGPT" maxlength="20" required>
@@ -29,14 +54,15 @@
       <label>Preço:</label>
       <input type="text" name="preco" id="preco" placeholder="Ex: Grátis ou R$9,90" required>
 
-      <label>Categoria:</label>
-      <Select required style="width: 200px;" class="Select1">
-        <option value="Produção de Texto">Produção de Texto</option>
-        <option value="Imagens">Imagens</option>
-        <option value="Organização">Organização</option>
-        <option value="Formatação">Formatação</option>
-        <option value="Estudar">Estudar</option>
-      </Select>
+      <label for="categoria">Categoria:</label>
+      <select id="categoria" name="categoria" required class="">
+        <option value="texto">Produção de Texto</option>
+        <option value="imagem">Imagens</option>
+        <option value="org">Organização</option>
+        <option value="format">Formatação</option>
+        <option value="estudo">Estudar</option>
+      </select>
+
       <br>
       <button type="submit" class="main-btn">Salvar</button>
     </form>
