@@ -182,7 +182,7 @@
 
   .hero-card {
     display: grid;
-    margin-top: 60px;
+    margin-top: 20px;
     grid-template-columns: 1.2fr .8fr;
     gap: 24px;
     background: linear-gradient(180deg, #0e1528, #0b0f19);
