@@ -4,34 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços - Imagens</title>
-  <link rel="stylesheet" href="../Styles/Stylesheet.css">
-  <link rel="icon" href="/Assets/ChatGPT Image 4 de set. de 2025, 22_58_43.png" style="scale: 1.5;">
+  <link rel="stylesheet" href="/Assets/css/Stylesheet.css">
+  <link rel="icon" href="Assets/Images/ChatGPT Image 4 de set. de 2025, 22_58_43.png" style="scale: 1.5;">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    a {
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-    <div class="container nav">
-      <a href="../index.html">
-      <div class="brand">
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark text-white">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="/index.html">
         <div class="logo" aria-hidden="true"></div>
-        <h1>StudyOne</h1>
-      </div>
+        <span> StudyOne</span>
       </a>
-      <input id="menuToggle" type="checkbox" aria-label="Abrir menu" />
-      <nav class="navlinks" aria-label="Navegação primária">
-        <a href="/Serviços.html">Ferramentas</a>
-        <a href="/Sobre.html">Sobre Nós</a>
-        <a href="#features">Ferramentas</a>
-        <a href="#exemplo">Exemplo</a>
-      </nav>
-      <label class="burger" for="menuToggle" aria-label="Abrir menu mobile"><span></span></label>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link not-dropdown" href="/pages/Serviços.html">Ferramentas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link not-dropdown" href="/pages/Sobre.html">Sobre Nós</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link not-dropdown" href="/pages/Contato.html">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link not-dropdown" href="#exemplo">Exemplo</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="container mobile">
-      <a href="#problema" onclick="document.getElementById('menuToggle').checked=false">Problema</a>
-      <a href="#solucao" onclick="document.getElementById('menuToggle').checked=false">Solução</a>
-      <a href="#features" onclick="document.getElementById('menuToggle').checked=false">Ferramentas</a>
-      <a href="#exemplo" onclick="document.getElementById('menuToggle').checked=false">Exemplo</a>
-    </div>
-  </header>
+  </nav>
+</header>
 <section class="services container">
   <div class="services-header">
     <h2 class="services-title" data-categoria="imagem">Sites de Editar/Gerar imagens</h2>
@@ -55,7 +67,7 @@
           <p class="service-desc">Editor intuitivo, com muitos modelos e recursos fáceis</p>
         </div>
         <div class="service-side">
-          <img src="../Assets/canva.png" class="service-logo" alt="Texto">
+          <img src="/Assets/Images/canva.png" class="service-logo" alt="Texto">
           <span class="service-price">Grátis (pago opcional)</span>
         </div>
       </div>
@@ -68,7 +80,7 @@
           <p class="service-desc">Edição simples, filtros prontos e criação de colagens</p>
         </div>
         <div class="service-side">
-          <img src="../Assets/fotor.webp" class="service-logo" alt="Imagens">
+          <img src="/Assets/Images/fotor.webp" class="service-logo" alt="Imagens">
           <span class="service-price">Grátis (pago opcional)</span>
         </div>
       </div>
@@ -81,7 +93,7 @@
           <p class="service-desc">Editor online avançado, bem parecido com Photoshop</p>
         </div>
         <div class="service-side">
-          <img src="../Assets/pix.png" class="service-logo" alt="Organização">
+          <img src="/Assets/Images/pix.png" class="service-logo" alt="Organização">
           <span class="service-price">Grátis (pago opcional)</span>
         </div>
       </div>
@@ -94,7 +106,7 @@
           <p class="service-desc">Ideal para posts, banners e design rápido online</p>
         </div>
         <div class="service-side">
-          <img src="../Assets/Adobe.png" class="service-logo" alt="Formatação">
+          <img src="/Assets/Images/Adobe.png" class="service-logo" alt="Formatação">
           <span class="service-price">Grátis (pago opcional)</span>
         </div>
       </div>
@@ -107,7 +119,7 @@
           <p class="service-desc">Remove fundos automaticamente com ótima precisão</p>
         </div>
         <div class="service-side">
-          <img src="../Assets/Remove.bg.png" class="service-logo" alt="Estudar" style="scale: 1;">
+          <img src="/Assets/Images/Remove.bg.png" class="service-logo" alt="Estudar" style="scale: 1;">
           <span class="service-price">Grátis (pago opcional)</span>
         </div>
       </div>
@@ -116,9 +128,10 @@
     <h6 class="small-info">*Alem dos 5 iniciais, nenhum serviço que o usuario coloca aparece para os outros, por ser um site sem API e Backend</h6>
   </section>
   
-  <script src="/Script/script.js"></script>
+  <script src="/Assets/js/script.Js"></script>
 <script>
   carregarServicos("imagem");
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
