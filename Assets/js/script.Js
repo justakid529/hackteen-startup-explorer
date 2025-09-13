@@ -12,7 +12,7 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
   const link = document.getElementById("link").value.trim();
   const logo = document.getElementById("logo").value.trim();
 
-  // ---- Validações ----
+  //Valida
   if (nome.length === 0 || nome.length > 20) {
     alert("O nome deve ter no máximo 20 caracteres.");
     return;
@@ -44,14 +44,14 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
     return;
   }
 
-  // ---- Se passou em todas as validações, salva ----
+  //se tem tudo passa
   const novoServico = { nome, descricao, preco, nota, link, logo };
 
   let lista = JSON.parse(localStorage.getItem(chave)) || [];
   lista.push(novoServico);
   localStorage.setItem(chave, JSON.stringify(lista));
 
-  // ---- Redireciona conforme categoria ----
+  
   switch (categoria) {
     case "texto":
       window.location.href = "Geraçãotexto.html"; 
