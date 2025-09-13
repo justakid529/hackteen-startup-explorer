@@ -34,9 +34,7 @@
           <li class="nav-item">
             <a class="nav-link not-dropdown" href="/pages/Contato.html">Contato</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link not-dropdown" href="#exemplo">Exemplo</a>
-          </li>
+
         </ul>
       </div>
     </div>
@@ -53,7 +51,7 @@
       <input type="number" name="nota" id="nota" min="0" max="10" placeholder="Ex: 8" required>
 
       <label>Descrição:</label>
-      <textarea name="descricao" id="descricao" placeholder="Explique o que o serviço faz" minlength="30" required></textarea>
+      <textarea name="descricao" id="descricao" placeholder="Explique o que o serviço faz" minlength="30" required maxlength="55"></textarea>
 
       <label>Link do Serviço:</label>
       <input type="url" name="link" id="link" placeholder="https://exemplo.com" required>
@@ -77,6 +75,13 @@
       <button type="submit" class="main-btn">Salvar</button>
     </form>
   </div>
+
+  <footer>
+    <div class="custom-container custom-row">
+      <span class="tiny">2025 StudyOne. Feito no HackTeen.</span>
+      <span class="tiny"></span>
+    </div>
+  </footer>
 
   <script src="/Assets/js/script.Js">
 
