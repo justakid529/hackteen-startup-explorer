@@ -1,4 +1,4 @@
-// ------- Salvar novo serviço --------
+// nov serviço
 document.getElementById("serviceForm")?.addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -18,10 +18,10 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
   lista.push(novoServico);
   localStorage.setItem(chave, JSON.stringify(lista));
 
-  // 🔥 redireciona para a página correta
+  
   switch (categoria) {
     case "texto":
-      window.location.href = "Geraçãotexto.html"; // Produção de Texto
+      window.location.href = "Geraçãotexto.html"; 
       break;
     case "imagem":
       window.location.href = "Imagens.html";
@@ -38,7 +38,7 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
   }
 });
 
-// ------- Carregar serviços salvos --------
+
 function carregarServicos(categoria) {
   const chave = "services_" + categoria;
   const lista = JSON.parse(localStorage.getItem(chave)) || [];
@@ -69,7 +69,7 @@ function carregarServicos(categoria) {
   });
 }
 
-// ------- Resetar lista --------
+
 document.getElementById("resetBtn")?.addEventListener("click", function() {
   const categoria = document.querySelector(".services-title")?.dataset.categoria;
   if (!categoria) return;
