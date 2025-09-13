@@ -489,6 +489,12 @@
     font-size: 15px;
     color: var(--custom-muted) !important;
     margin: 0 0 16px;
+    word-wrap: break-word;      /* quebra palavras grandes */
+    white-space: normal;        /* permite que o texto quebre linha */
+    overflow-wrap: break-word;  /* compatibilidade extra */
+    max-width: 100%;            /* nunca ultrapassa o container */
+    display: block;             /* força comportamento de bloco */
+    font-size: 0.9rem;  
   }
 
   .service-price {
@@ -552,6 +558,19 @@
     margin-left: 10px;
   }
 
+  @media (max-width: 600px) {
+  .service-line {
+    flex-direction: column;   /* empilha os elementos no celular */
+    align-items: flex-start;  /* alinha à esquerda */
+  }
+
+  .service-side {
+    margin-top: 10px;
+    width: 100%;              /* logo e preço ocupam largura total */
+    display: flex;
+    justify-content: space-between;
+  }
+}
   .service-logo {
     width: 42px;
     height: 42px;
