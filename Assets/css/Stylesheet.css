@@ -273,6 +273,7 @@ header {
 .btn.primary {
   background: linear-gradient(90deg, var(--brand), var(--brand-2));
   color: #06101a;
+  font-weight: 600;
 }
 
 .codebar {
@@ -306,9 +307,19 @@ section {
   letter-spacing: .12em;
   text-transform: uppercase;
   font-size: 12px;
+
   margin-bottom: 15px;
   margin-top: 60px;
 }
+
+
+#res-problem {
+  text-align: center;
+  padding-bottom: 14px;
+  margin-top: 15px;
+}
+
+
 
 .title {
   font-size: 28px;
@@ -342,6 +353,15 @@ a {
   border-radius: var(--radius-xl);
   padding: 18px;
   box-shadow: var(--shadow);
+  
+}
+.custom-card input {
+  background-color: #1a1f2e;
+  color: white;
+}
+.custom-card textarea {
+  background-color: #1a1f2e;
+  color: white;
 }
 
 .custom-card h3 {
@@ -389,7 +409,7 @@ a {
   color: #9be7ff;
 }
 
-/*CTA BAND*/
+
 .cta-band {
   margin: 28px 0;
   padding: 20px;
@@ -434,7 +454,24 @@ footer .custom-row {
     margin-right: 40%;
     display: flex;
   }
+
+  footer .custom-row {
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
 }
+
+
+
+@media (min-width:1150px) {
+  .missao-visao-valores div{
+    
+}
+}
+
+
+
 
 @media (max-width:1160px) {
   .img-responsive-cell {
@@ -699,11 +736,15 @@ footer .custom-row {
   padding: 24px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
+  
+  
 }
 
 .service-form label {
   font-weight: 600;
   color: var(--text);
+  
+  
 }
 
 .service-form input,
@@ -714,11 +755,14 @@ footer .custom-row {
   background: #12182a;
   color: var(--text);
   font-size: 15px;
+  
+  
 }
 
 .service-form textarea {
   min-height: 100px;
   resize: vertical;
+  
 }
 
 .Select1 {
@@ -765,15 +809,18 @@ footer .custom-row {
 .missao-visao-valores {
   margin: 60px auto;
   gap: 2rem;
+  
 }
 
 .missao-visao-valores div {
   background: var(--card);
   color: var(--text);
   padding: 24px;
+  
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
+ 
 }
 
 .missao-visao-valores div:hover {
@@ -824,7 +871,7 @@ footer .custom-row {
 .nv-grid {
   display: grid;
   gap: 2rem;
-  justify-items: center;
+  
   margin-top: 2rem;
 }
 
@@ -861,6 +908,7 @@ footer .custom-row {
 .redes-sociais .links {
   display: flex;
   justify-content: center;
+  height: 0;
   gap: 20px;
 }
 

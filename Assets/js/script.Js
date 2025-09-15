@@ -18,7 +18,7 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
     return;
   }
 
-  if (isNaN(nota) || nota <= 0 || nota >= 10) {
+  if (isNaN(nota) || nota < 0 || nota > 11) {
     alert("A nota deve ser um número maior que 0 e menor que 10.");
     return;
   }
