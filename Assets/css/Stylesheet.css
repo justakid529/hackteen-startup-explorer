@@ -25,6 +25,8 @@ body {
   background: linear-gradient(180deg, #0b0f19 0%, #121b33 100%);
   color: var(--text);
   font-family: Inter, system-ui, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  height: auto;
+  min-height: 100%;
 }
 
 body::after {
@@ -461,17 +463,6 @@ footer .custom-row {
     display: block;
   }
 }
-
-
-
-@media (min-width:1150px) {
-  .missao-visao-valores div{
-    
-}
-}
-
-
-
 
 @media (max-width:1160px) {
   .img-responsive-cell {
