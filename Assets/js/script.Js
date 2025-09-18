@@ -150,4 +150,13 @@ document.getElementById("form-contato")?.addEventListener("submit", function(e) 
   this.reset();
   window.location.href = "contato-term.html";
 });
+const playBtn = document.getElementById("playBtn");
+    const audio = document.getElementById("myAudio");
 
+    playBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    });
