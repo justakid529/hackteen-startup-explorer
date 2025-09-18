@@ -967,3 +967,31 @@ footer .custom-row {
   transform: scale(1.05);
   background: linear-gradient(90deg, #00f2fe, #4facfe);
 }
+.center-wrapper {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;     /* takes full width */
+  height: 100%;    /* takes full height of parent */
+}
+
+.btn-audio {
+  margin-top: 0px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.btn-audio svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;         /* inherit text color from .primary */
+  display: block;             /* remove inline svg spacing */
+  padding-right: 4px;
+  scale: 1.3;
+}
