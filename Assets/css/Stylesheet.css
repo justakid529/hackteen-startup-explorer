@@ -423,11 +423,25 @@ a {
   gap: 16px;
 }
 
-.cta-band .left {
+.cta-band .cta-band1 .left {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
+.cta-band1 {
+  margin: 28px 0;
+  padding: 20px;
+  max-height: 180px;
+  background: linear-gradient(90deg, rgba(159, 178, 248, 0.2), rgba(0, 0, 0, 0.2));
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+
 
 /*FOOTER*/
 footer {
