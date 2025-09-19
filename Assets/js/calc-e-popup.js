@@ -4,16 +4,17 @@
 
 
 function calcularCalc() {
+    
     const horas = parseInt(document.getElementById("horas-calc")?.value) || 0;
-    const semanas = parseInt(document.getElementById("semanas-calc")?.value) || 0;
-    const folhas = horas * semanas * FOLHAS_POR_HORA;
-    const horasprsm = horas * semanas;
+    const dias = parseInt(document.getElementById("dias-calc")?.value) || 0;
+    const folhas = horas * dias * FOLHAS_POR_HORA;
+    const horasprda = horas * dias;
     const cadernos = Math.ceil(folhas / FOLHAS_POR_CADERNO);
     const arvores = (folhas / FOLHAS_POR_ARVORE).toFixed(3);
     const resultado = document.getElementById("resultado-calc");
-    if (resultado) {
+    if (resultado && horas && dias) {
       resultado.innerHTML = `
-        🕟 <b>${horasprsm}</b> horas estudadas<br>
+        🕟 <b>${horasprda}</b> horas estudadas<br>
         📄 <b>${folhas}</b> folhas economizadas<br>
         📘 Equivalente a <b>${cadernos}</b> cadernos<br>
         🌳 Aproximadamente <b>${arvores}</b> árvores preservadas
@@ -23,7 +24,7 @@ function calcularCalc() {
 
   document.querySelector(".calc-btn")?.addEventListener("click", calcularCalc);
 
-// ================= POPUP DE ESTUDO =================
+// POPUP DE ESTUDO
   const studyPopup = document.getElementById("studyPopup");
   const resultadoPopup = document.getElementById("resultadoPopup");
 
