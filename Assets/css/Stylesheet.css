@@ -411,8 +411,9 @@ a {
 }
 
 
+
 .cta-band {
-  margin: 28px 0;
+  margin: 28px auto;
   padding: 20px;
   max-height: 180px;
   background: linear-gradient(90deg, rgba(108, 140, 255, .2), rgba(124, 240, 255, .2));
@@ -424,16 +425,11 @@ a {
   gap: 16px;
 }
 
-.cta-band .cta-band1 .left {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
 .cta-band1 {
-  margin: 28px 0;
+  margin: 28px auto;
   padding: 20px;
   max-height: 180px;
-  background: linear-gradient(90deg, rgba(159, 178, 248, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(90deg, rgba(60, 61, 66, 0.2), rgba(0, 156, 177, 0.2));
   border: 1px solid rgba(255, 255, 255, .12);
   border-radius: var(--radius-2xl);
   display: flex;
@@ -442,6 +438,11 @@ a {
   gap: 16px;
 }
 
+.cta-band .left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
 
 /*FOOTER*/

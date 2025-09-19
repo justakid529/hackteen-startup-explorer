@@ -1,4 +1,4 @@
-// ================= FORMULÁRIO GERAL =================
+//  FORMULÁRIO GERAL 
 document.getElementById("serviceForm")?.addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -27,7 +27,7 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
   lista.push(novoServico);
   localStorage.setItem(chave, JSON.stringify(lista));
 
-  // Redireciona conforme categoria
+  // Redireciona pra categoria
   switch(categoria){
     case "texto": window.location.href="Geraçãotexto.html"; break;
     case "imagem": window.location.href="Imagens.html"; break;
@@ -36,7 +36,7 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
   }
 });
 
-// ================= FORMULÁRIO YOUTUBE =================
+//  FORMULÁRIO YOUTUBE 
 document.getElementById("youtubeForm")?.addEventListener("submit", function(event) {
   event.preventDefault();
 
@@ -46,7 +46,7 @@ document.getElementById("youtubeForm")?.addEventListener("submit", function(even
   const link = document.getElementById("link").value.trim();
   
 
-  // === Validação ===
+  //  Validação 
   if (titulo.length === 0 || titulo.length > 50) { alert("O título deve ter no máximo 50 caracteres."); return; }
   if (isNaN(nota) || nota < 0 || nota > 10) { alert("A nota deve ser entre 0 e 10."); return; }
   if (descricao.length < 20 || descricao.length > 80) { alert("A descrição deve ter entre 20 e 80 caracteres."); return; }
@@ -58,18 +58,18 @@ document.getElementById("youtubeForm")?.addEventListener("submit", function(even
   listaVideos.push(novoVideo);
   localStorage.setItem("youtube", JSON.stringify(listaVideos));
 
-  // Redireciona automaticamente para a página de vídeos
+  // Redireciona
   window.location.href = "Youtube.html";
 });
 
-// ================= FUNÇÃO CARREGAR SERVIÇOS/VIDEOS =================
+//FUNÇÃO CARREGAR SERVIÇOS/VIDEOS 
 function carregarServicos(categoria) {
   let chave = categoria === "youtube" ? "youtube" : "services_" + categoria;
   const lista = JSON.parse(localStorage.getItem(chave)) || [];
   const container = document.querySelector(".services-list");
   if (!container) return;
 
-  // Não limpar o container para manter os exemplos hardcoded
+  
   lista.forEach(servico => {
     const a = document.createElement("a");
     a.href = servico.link;
@@ -105,7 +105,7 @@ function carregarServicos(categoria) {
   });
 }
 
-// ================= FUNÇÃO YOUTUBE EMBED =================
+//  FUNÇÃO YOUTUBE EMBED 
 function converterParaEmbed(link) {
   let videoId = "";
   if(link.includes("watch?v=")) videoId = link.split("watch?v=")[1].split("&")[0];
@@ -113,7 +113,7 @@ function converterParaEmbed(link) {
   return `https://www.youtube.com/embed/${videoId}`;
 }
 
-// ================= RESET =================
+//  RESET 
 document.getElementById("resetBtn")?.addEventListener("click", function(){
   const categoria = document.querySelector(".services-title")?.dataset.categoria;
   if(!categoria) return;
@@ -122,7 +122,7 @@ document.getElementById("resetBtn")?.addEventListener("click", function(){
   location.reload();
 });
 
-// ================= CARREGAR AUTOMÁTICO =================
+// CARREGAR AUTOMÁTICO 
 document.addEventListener("DOMContentLoaded", () => {
   const categoria = document.querySelector(".services-title")?.dataset.categoria;
   if(categoria) carregarServicos(categoria);

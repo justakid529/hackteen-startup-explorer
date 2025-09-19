@@ -129,6 +129,53 @@
   <h6 class="small-info">*Alem dos 5 iniciais, nenhum serviço que o usuario coloca aparece para os outros, por ser um site sem API e Backend</h6>
 </section>
 
+<section>
+  <div class="study-widget">
+  
+  <button class="study-popup-btn" onclick="toggleStudyPopup()">📚</button>
+
+  <!-- Popup -->
+  <div class="study-popup-box" id="studyPopup">
+    <h1>📚 Descubra sua Lição Recomendada</h1>
+    <p class="subtitulo">Escolha uma matéria e o nível para receber uma sugestão.</p>
+
+    <form id="formRecomendacaoPopup">
+      <label for="materiaPopup">Matéria:</label>
+      <select id="materiaPopup">
+        <option value="">-- Escolha --</option>
+        <option value="matematica">Matemática</option>
+        <option value="portugues">Português</option>
+        <option value="historia">História</option>
+        <option value="geografia">Geografia</option>
+        <option value="ciencias">Ciências</option>
+        <option value="fisica">Física</option>
+        <option value="quimica">Química</option>
+        <option value="biologia">Biologia</option>
+        <option value="sociologia">Sociologia</option>
+        <option value="filosofia">Filosofia</option>
+        <option value="ingles">Inglês</option>
+        <option value="educacao">Educação Física</option>
+        <option value="artes">Artes</option>
+      </select>
+
+      <label for="nivelPopup">Nível:</label>
+      <select id="nivelPopup">
+        <option value="">-- Escolha --</option>
+        <option value="fundamental1">Fundamental 1</option>
+        <option value="fundamental2">Fundamental 2</option>
+        <option value="ensinoMedio">Ensino Médio</option>
+        <option value="faculdade">Faculdade</option>
+      </select>
+
+      <button type="button" class="study-popup-action" onclick="gerarRecomendacaoPopup()">Obter Recomendação</button>
+    </form>
+
+    <div id="resultadoPopup" class="study-popup-result"></div>
+  </div>
+</div>
+</section>
+    
+
 <footer>
     <div class="custom-container custom-row">
       <span class="tiny">2025 StudyOne. Feito no HackTeen.</span>
@@ -137,9 +184,7 @@
   </footer>
   
 <script src="../../Assets/js/servic-yt.js"></script>
-<script>
-  
-</script>
+<script src="../../Assets/js/calc-e-popup.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

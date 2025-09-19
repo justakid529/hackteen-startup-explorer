@@ -43,11 +43,11 @@
 <section class="custom-container calc-section">
   <h2 class="title text-white">Calculadora de Folhas Economizadas 🌱</h2>
   <div class="custom-card calc-card">
-    <label for="horas-calc" class="eyebrow">Horas de estudo por semana:</label>
-    <input type="number" id="horas-calc" placeholder="Ex: 10" class="calc-input">
+    <label for="horas-calc" class="eyebrow">Horas de estudo por dia:</label>
+    <input type="number" id="horas-calc" placeholder="Ex: 10" class="calc-input" required>
     
-    <label for="semanas-calc" class="eyebrow">Quantidade de semanas:</label>
-    <input type="number" id="semanas-calc" placeholder="Ex: 20" class="calc-input">
+    <label for="semanas-calc" class="eyebrow">Quantidade de dias:</label>
+    <input type="number" id="dias-calc" placeholder="Ex: 20" class="calc-input" min="1" required>
     
     <button onclick="calcularCalc()" class="main-btn calc-btn">Calcular</button>
     
@@ -55,7 +55,52 @@
   </div>
 </section>
 
+<section>
+  <div class="study-widget">
+  
+  <button class="study-popup-btn" onclick="toggleStudyPopup()">📚</button>
 
+  <!-- Popup -->
+  <div class="study-popup-box" id="studyPopup">
+    <h1>📚 Descubra sua Lição Recomendada</h1>
+    <p class="subtitulo">Escolha uma matéria e o nível para receber uma sugestão.</p>
+
+    <form id="formRecomendacaoPopup">
+      <label for="materiaPopup">Matéria:</label>
+      <select id="materiaPopup">
+        <option value="">-- Escolha --</option>
+        <option value="matematica">Matemática</option>
+        <option value="portugues">Português</option>
+        <option value="historia">História</option>
+        <option value="geografia">Geografia</option>
+        <option value="ciencias">Ciências</option>
+        <option value="fisica">Física</option>
+        <option value="quimica">Química</option>
+        <option value="biologia">Biologia</option>
+        <option value="sociologia">Sociologia</option>
+        <option value="filosofia">Filosofia</option>
+        <option value="ingles">Inglês</option>
+        <option value="educacao">Educação Física</option>
+        <option value="artes">Artes</option>
+      </select>
+
+      <label for="nivelPopup">Nível:</label>
+      <select id="nivelPopup">
+        <option value="">-- Escolha --</option>
+        <option value="fundamental1">Fundamental 1</option>
+        <option value="fundamental2">Fundamental 2</option>
+        <option value="ensinoMedio">Ensino Médio</option>
+        <option value="faculdade">Faculdade</option>
+      </select>
+
+      <button type="button" class="study-popup-action" onclick="gerarRecomendacaoPopup()">Obter Recomendação</button>
+    </form>
+
+    <div id="resultadoPopup" class="study-popup-result"></div>
+  </div>
+</div>
+</section>
+    
 
 <footer>
   <div class="custom-container custom-row">
