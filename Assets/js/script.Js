@@ -1,162 +1,187 @@
-// ================= FORMULÁRIO GERAL =================
-document.getElementById("serviceForm")?.addEventListener("submit", function(event) {
-  event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  // ================= FORMULÁRIO GERAL =================
+  document.getElementById("serviceForm")?.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  const categoria = document.getElementById("categoria").value;
-  const chave = "services_" + categoria;
+    const serviceName = document.getElementById("serviceName").value;
+    const serviceLink = document.getElementById("serviceLink").value;
 
-  const nome = document.getElementById("nome").value.trim();
-  const descricao = document.getElementById("descricao").value.trim();
-  const preco = document.getElementById("preco").value.trim();
-  const nota = parseFloat(document.getElementById("nota").value);
-  const link = document.getElementById("link").value.trim();
-  const logo = document.getElementById("logo").value.trim();
+    if (serviceName && serviceLink) {
+      const serviceCard = `
+        <div class="service-card">
+          <h3>${serviceName}</h3>
+          <a href="${serviceLink}" target="_blank">Acessar</a>
+        </div>
+      `;
+      document.getElementById("servicesList").innerHTML += serviceCard;
 
-  // === Validação ===
-  if (nome.length === 0 || nome.length > 20) { alert("O nome deve ter no máximo 20 caracteres."); return; }
-  if (isNaN(nota) || nota < 0 || nota > 10) { alert("A nota deve ser entre 0 e 10."); return; }
-  if (descricao.length < 30 || descricao.length > 50) { alert("A descrição deve ter entre 30 e 50 caracteres."); return; }
-  if (preco.length > 20) { alert("O preço deve ter no máximo 20 caracteres."); return; }
+      this.reset();
+    }
+  });
 
-  const urlRegex = /^(https?:\/\/)[^\s$.?#].[^\s]*$/;
-  if (!urlRegex.test(link)) { alert("O link deve ser uma URL válida."); return; }
-  if (!urlRegex.test(logo)) { alert("A logo deve ser uma URL válida."); return; }
+  // ================= FORMULÁRIO YOUTUBE =================
+  document.getElementById("youtubeForm")?.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  const novoServico = { nome, descricao, preco, nota, link, logo };
-  let lista = JSON.parse(localStorage.getItem(chave)) || [];
-  lista.push(novoServico);
-  localStorage.setItem(chave, JSON.stringify(lista));
+    const videoName = document.getElementById("videoName").value;
+    const videoLink = document.getElementById("videoLink").value;
 
-  // Redireciona conforme categoria
-  switch(categoria){
-    case "texto": window.location.href="Geraçãotexto.html"; break;
-    case "imagem": window.location.href="Imagens.html"; break;
-    case "org": window.location.href="Organização.html"; break;
-    case "format": window.location.href="Formatação.html"; break;
+    if (videoName && videoLink) {
+      const videoCard = `
+        <div class="video-card">
+          <h3>${videoName}</h3>
+          <iframe src="${converterParaEmbed(videoLink)}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      `;
+      document.getElementById("youtubeList").innerHTML += videoCard;
+
+      this.reset();
+    }
+  });
+
+  // ================= FUNÇÃO CARREGAR SERVIÇOS =================
+  function carregarServicos(categoria) {
+    const servicesList = document.getElementById("servicesList");
+    servicesList.innerHTML = "";
+
+    const servicos = {
+      estudo: [
+        { nome: "Khan Academy", link: "https://pt.khanacademy.org" },
+        { nome: "Coursera", link: "https://www.coursera.org" },
+      ],
+      entretenimento: [
+        { nome: "Netflix", link: "https://www.netflix.com" },
+        { nome: "YouTube", link: "https://www.youtube.com" },
+      ],
+    };
+
+    servicos[categoria]?.forEach((s) => {
+      servicesList.innerHTML += `
+        <div class="service-card">
+          <h3>${s.nome}</h3>
+          <a href="${s.link}" target="_blank">Acessar</a>
+        </div>
+      `;
+    });
   }
-});
 
-// ================= FORMULÁRIO YOUTUBE =================
-document.getElementById("youtubeForm")?.addEventListener("submit", function(event) {
-  event.preventDefault();
+  // ================= FUNÇÃO YOUTUBE EMBED =================
+  function converterParaEmbed(link) {
+    return link.replace("watch?v=", "embed/");
+  }
 
-  const titulo = document.getElementById("titulo").value.trim();
-  const nota = parseFloat(document.getElementById("nota").value);
-  const descricao = document.getElementById("descricao").value.trim();
-  const link = document.getElementById("link").value.trim();
+  // ================= RESET =================
+  document.getElementById("resetBtn")?.addEventListener("click", function () {
+    document.getElementById("servicesList").innerHTML = "";
+    document.getElementById("youtubeList").innerHTML = "";
+  });
 
-  // === Validação ===
-  if (titulo.length === 0 || titulo.length > 50) { alert("O título deve ter no máximo 50 caracteres."); return; }
-  if (isNaN(nota) || nota < 0 || nota > 10) { alert("A nota deve ser entre 0 e 10."); return; }
-  if (descricao.length < 20 || descricao.length > 150) { alert("A descrição deve ter entre 20 e 150 caracteres."); return; }
-  const urlRegex = /^(https?:\/\/)[^\s$.?#].[^\s]*$/;
-  if (!urlRegex.test(link)) { alert("O link deve ser uma URL válida."); return; }
+  // ================= CARREGAR AUTOMÁTICO =================
+  const categoria = document.querySelector(".services-title")?.dataset.categoria;
+  if (categoria) carregarServicos(categoria);
 
-  const novoVideo = { titulo, nota, descricao, link };
-  let listaVideos = JSON.parse(localStorage.getItem("youtube")) || [];
-  listaVideos.push(novoVideo);
-  localStorage.setItem("youtube", JSON.stringify(listaVideos));
+  // ================= FORMULÁRIO CONTATO =================
+  document.getElementById("form-contato")?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Mensagem enviada com sucesso!");
+    this.reset();
+  });
 
-  // Redireciona automaticamente para a página de vídeos
-  window.location.href = "Youtube.html";
-});
+  // ================= AUDIO PLAYER =================
+  const playBtn = document.getElementById("playBtn");
+  const audio = document.getElementById("myAudio");
+  playBtn?.addEventListener("click", () => {
+    if (audio.paused) audio.play();
+    else audio.pause();
+  });
 
-// ================= FUNÇÃO CARREGAR SERVIÇOS/VIDEOS =================
-function carregarServicos(categoria) {
-  let chave = categoria === "youtube" ? "youtube" : "services_" + categoria;
-  const lista = JSON.parse(localStorage.getItem(chave)) || [];
-  const container = document.querySelector(".services-list");
-  if (!container) return;
+  // ================= POPUP DE ESTUDO =================
+  const studyPopup = document.getElementById("studyPopup");
+  const resultadoPopup = document.getElementById("resultadoPopup");
 
-  // Não limpar o container para manter os exemplos hardcoded
-  lista.forEach(servico => {
-    const a = document.createElement("a");
-    a.href = servico.link;
-    a.target = "_blank";
-    const div = document.createElement("div");
-    div.className = "service-line";
+  window.toggleStudyPopup = function () {
+    studyPopup.classList.toggle("show");
+  };
 
-    if(categoria === "youtube"){
-      div.innerHTML = `
-        <div class="service-info">
-          <h3 class="service-name">${servico.titulo} | ${servico.nota}/10</h3>
-          <p class="service-desc">${servico.descricao}</p>
-        </div>
-        <div class="service-side">
-          <iframe width="200" height="113" src="${converterParaEmbed(servico.link)}" frameborder="0" allowfullscreen></iframe>
-        </div>
-      `;
-    } else {
-      div.innerHTML = `
-        <div class="service-info">
-          <h3 class="service-name">${servico.nome} | ${servico.nota}/10</h3>
-          <p class="service-desc">${servico.descricao}</p>
-        </div>
-        <div class="service-side">
-          <img src="${servico.logo}" class="service-logo" alt="${servico.nome}">
-          <span class="service-price">${servico.preco}</span>
-        </div>
-      `;
+  const recomendacoesPopup = {
+    matematica: {
+      basico: "📐 Estude Frações e Porcentagem.",
+      intermediario: "📊 Explore Equações e Funções.",
+      avancado: "📈 Aprenda Logaritmos e Trigonometria."
+    },
+    portugues: {
+      basico: "📖 Revise Ortografia e Pontuação.",
+      intermediario: "📝 Pratique Interpretação de Texto.",
+      avancado: "📚 Estude Figuras de Linguagem e Redação."
+    },
+    historia: {
+      basico: "🏰 Conheça Civilizações Antigas.",
+      intermediario: "⚔️ Estude Idade Média e Moderna.",
+      avancado: "🕊️ Guerras Mundiais e Brasil Contemporâneo."
+    },
+    geografia: {
+      basico: "🗺️ Aprenda sobre Relevo e Clima.",
+      intermediario: "🌍 Estude População e Economia.",
+      avancado: "🌐 Explore Geopolítica e Globalização."
+    },
+    ciencias: {
+      basico: "🔬 Conheça os Estados da Matéria.",
+      intermediario: "🌡️ Energia e Transformações.",
+      avancado: "🧪 Genética e Ecossistemas."
+    },
+    fisica: {
+      basico: "⚙️ Estude Movimento e Força.",
+      intermediario: "🔋 Energia e Trabalho.",
+      avancado: "🌌 Eletromagnetismo e Relatividade."
+    },
+    quimica: {
+      basico: "🧫 Tabela Periódica e Substâncias.",
+      intermediario: "⚗️ Ligações Químicas.",
+      avancado: "🧪 Reações Orgânicas e Equilíbrio."
+    },
+    biologia: {
+      basico: "🌱 Estude Células e Seres Vivos.",
+      intermediario: "🧬 Genética e Reprodução.",
+      avancado: "🌍 Evolução e Biotecnologia."
+    },
+    sociologia: {
+      basico: "👥 Cultura e Sociedade.",
+      intermediario: "📊 Estratificação Social.",
+      avancado: "🧠 Teorias Sociológicas."
+    },
+    filosofia: {
+      basico: "💭 Ética e Moral.",
+      intermediario: "📚 Pensadores Clássicos.",
+      avancado: "🧠 Epistemologia e Existencialismo."
+    },
+    ingles: {
+      basico: "🔤 Vocabulário Básico.",
+      intermediario: "🗣️ Gramática e Conversação.",
+      avancado: "📘 Textos Literários e Tradução."
+    },
+    educacao: {
+      basico: "🏃‍♂️ Benefícios da Atividade Física.",
+      intermediario: "🤸‍♀️ Esportes e Condicionamento.",
+      avancado: "💪 Fisiologia e Treinamento."
+    },
+    artes: {
+      basico: "🎨 Cores e Formas.",
+      intermediario: "🖌️ História da Arte.",
+      avancado: "🎭 Estilos e Expressões Artísticas."
+    }
+  };
+
+  window.gerarRecomendacaoPopup = function () {
+    const materia = document.getElementById("materiaPopup").value;
+    const nivel = document.getElementById("nivelPopup").value;
+
+    if (!materia || !nivel) {
+      resultadoPopup.innerHTML = "⚠️ Por favor, selecione a matéria e o nível.";
+      resultadoPopup.style.display = "block";
+      return;
     }
 
-    a.appendChild(div);
-    container.appendChild(a);
-  });
-}
-
-// ================= FUNÇÃO YOUTUBE EMBED =================
-function converterParaEmbed(link) {
-  let videoId = "";
-  if(link.includes("watch?v=")) videoId = link.split("watch?v=")[1].split("&")[0];
-  else if(link.includes("youtu.be/")) videoId = link.split("youtu.be/")[1].split("?")[0];
-  return `https://www.youtube.com/embed/${videoId}`;
-}
-
-// ================= RESET =================
-document.getElementById("resetBtn")?.addEventListener("click", function(){
-  const categoria = document.querySelector(".services-title")?.dataset.categoria;
-  if(!categoria) return;
-  const chave = categoria === "youtube" ? "youtube" : "services_" + categoria;
-  localStorage.removeItem(chave);
-  location.reload();
+    resultadoPopup.innerHTML = recomendacoesPopup[materia][nivel];
+    resultadoPopup.style.display = "block";
+  };
 });
-
-// ================= CARREGAR AUTOMÁTICO =================
-document.addEventListener("DOMContentLoaded", () => {
-  const categoria = document.querySelector(".services-title")?.dataset.categoria;
-  if(categoria) carregarServicos(categoria);
-});
-
-
-
-// ================= CONTACT FORM =================
-document.getElementById("form-contato")?.addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const nome = document.getElementById('nome').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const mensagem = document.getElementById('mensagem').value.trim();
-
-  if (!nome || !email || !mensagem) {
-    alert('Por favor, preencha todos os campos!');
-    return;
-  }
-
-  if (!email.includes('@')) {
-    alert('Por favor, insira um e-mail válido!');
-    return;
-  }
-
-  this.reset();
-  window.location.href = "contato-term.html";
-});
-const playBtn = document.getElementById("playBtn");
-    const audio = document.getElementById("myAudio");
-
-    playBtn.addEventListener("click", () => {
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
-    });
