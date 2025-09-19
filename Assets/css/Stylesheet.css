@@ -543,6 +543,8 @@ footer .custom-row {
   .img-responsive-cell {
     display: none;
   }
+  
+
 }
 
 /*SERVICES*/
@@ -1041,7 +1043,7 @@ footer .custom-row {
   padding: 28px 22px;
   border-radius: var(--radius-lg);
   max-width: 360px;
-  width: 100%;
+  width: auto;
   box-shadow: var(--shadow);
   z-index: 999;
   opacity: 0;
@@ -1117,4 +1119,43 @@ footer .custom-row {
   font-weight: 600;
   color: var(--brand-2);
   text-align: center;
+}
+/* ================= CALCULADORA ================= */
+.calc-section {
+  margin-top: 40px;
+}
+
+.calc-card {
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.calc-input {
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,.08);
+  background: #1a2236;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.calc-resultado {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: #0f1526;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brand-2);
+  text-align: center;
+}
+
+.calc-btn {
+  align-self: flex-start;
+  padding: 10px 18px;
 }
