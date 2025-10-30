@@ -1161,3 +1161,31 @@ footer .custom-row {
   align-self: flex-start;
   padding: 10px 18px;
 }
+
+/* ===== EFEITOS CALCULADORA ===== */
+.calc-resultado {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s ease;
+  box-shadow: 0 0 0 rgba(124, 240, 255, 0);
+  background-color: #00888f;
+  color: white;
+}
+
+.calc-resultado.show {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 18px rgba(124, 240, 255, 0.35);
+  animation: pulseGlow 1.6s ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 18px rgba(124, 240, 255, 0.35); }
+  50% { box-shadow: 0 0 30px rgba(124, 240, 255, 0.6); }
+}
+/* Destaque para as horas estudadas */
+.calc-resultado span#hourspan {
+  font-size: 3em;
+  color: var(--brand-2);
+  text-shadow: 0 0 8px rgba(124, 240, 255, 0.4);
+}

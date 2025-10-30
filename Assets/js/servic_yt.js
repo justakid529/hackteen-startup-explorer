@@ -29,10 +29,10 @@ document.getElementById("serviceForm")?.addEventListener("submit", function(even
 
   // Redireciona pra categoria
   switch(categoria){
-    case "texto": window.location.href="Geraçãotexto.html"; break;
-    case "imagem": window.location.href="Imagens.html"; break;
-    case "org": window.location.href="Organização.html"; break;
-    case "format": window.location.href="Formatação.html"; break;
+    case "texto": window.location.href="geracaotexto.html"; break;
+    case "imagem": window.location.href="imagens.html"; break;
+    case "org": window.location.href="organizacao.html"; break;
+    case "format": window.location.href="formatacao.html"; break;
   }
 });
 
