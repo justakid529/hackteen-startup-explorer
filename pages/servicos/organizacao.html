@@ -1,189 +1,264 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serviços - Organização</title>
-  <link rel="stylesheet" href="../../Assets/css/stylesheet.css">
-  <link rel="icon" href="Assets/Images/ChatGPT Image 4 de set. de 2025, 22_58_43.png" style="scale: 1.5;">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    a {
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark text-white">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="../../index.html">
-        <div class="logo" aria-hidden="true"></div>
-        <span> StudyOne</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link not-dropdown" href="../servicos.html">Ferramentas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link not-dropdown" href="../sobre.html">Sobre Nós</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link not-dropdown" href="../contato.html">Contato</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link not-dropdown navlink-selected" href="../conscientizacao.html">Conscientização</a>
-          </li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços - Organização</title>
+    <link rel="stylesheet" href="../../Assets/css/stylesheet.css" />
+    <link
+      rel="icon"
+      href="Assets/Images/ChatGPT Image 4 de set. de 2025, 22_58_43.png"
+      style="scale: 1.5"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-gradient-dark text-white"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="../../index.html"
+          >
+            <div class="logo" aria-hidden="true"></div>
+            <span> StudyOne</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link not-dropdown" href="../servicos.html"
+                  >Ferramentas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link not-dropdown" href="../sobre.html"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link not-dropdown" href="../contato.html"
+                  >Contato</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link not-dropdown"
+                  href="../conscientizacao.html"
+                  >Conscientização</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="services container">
+      <div class="services-header">
+        <h2 class="services-title" data-categoria="org">
+          Sites de Organização
+        </h2>
+
+        <button
+          class="main-btn"
+          onclick="window.location.href='novo_serviço.html'"
+        >
+          Adicionar Serviço
+        </button>
       </div>
-    </div>
-  </nav>
-</header>
-<section class="services container">
-  <div class="services-header">
-    <h2 class="services-title" data-categoria="org">Sites de Organização</h2>
 
-    
-    <button class="main-btn" onclick="window.location.href='novo-serviço.html'">
-      Adicionar Serviço
-    </button>
-  </div>
+      <div style="text-align: right; margin: 10px 0">
+        <button id="resetBtn" class="grey-btn">Resetar lista</button>
+      </div>
 
-  <div style="text-align: right; margin: 10px 0;">
-    <button id="resetBtn" class="grey-btn">Resetar lista</button>
-  </div>
+      <h6 class="small-info">*Avaliações feitas pelos Donos do site</h6>
+      <div class="services-list">
+        <a href="https://trello.com/">
+          <div class="service-line">
+            <div class="service-info">
+              <h3 class="service-name">Trello | 9/10</h3>
+              <p class="service-desc">
+                Organize tarefas em quadros, colunas e cartões visuais
+              </p>
+            </div>
+            <div class="service-side">
+              <img
+                src="../../Assets/Images/Trello.png"
+                class="service-logo"
+                alt="Trello"
+              />
+              <span class="service-price">Grátis (pago opcional)</span>
+            </div>
+          </div>
+        </a>
 
-  <h6 class="small-info">*Avaliações feitas pelos Donos do site</h6>
-  <div class="services-list">
-    <a href="https://trello.com/">
-      <div class="service-line">
-        <div class="service-info">
-          <h3 class="service-name">Trello | 9/10</h3>
-          <p class="service-desc">Organize tarefas em quadros, colunas e cartões visuais</p>
-        </div>
-        <div class="service-side">
-          <img src="../../Assets/Images/Trello.png" class="service-logo" alt="Trello">
-          <span class="service-price">Grátis (pago opcional)</span>
+        <a href="https://notion.so">
+          <div class="service-line">
+            <div class="service-info">
+              <h3 class="service-name">Notion | 10/10</h3>
+              <p class="service-desc">
+                Blocos para notas, tarefas, calendários e muito mais
+              </p>
+            </div>
+            <div class="service-side">
+              <img
+                src="../../Assets/Images/notion.png"
+                class="service-logo"
+                alt="Notion"
+              />
+              <span class="service-price">Grátis (pago opcional)</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://todoist.com">
+          <div class="service-line">
+            <div class="service-info">
+              <h3 class="service-name">Todoist | 8/10</h3>
+              <p class="service-desc">
+                Lista de tarefas simples com prazos e prioridades
+              </p>
+            </div>
+            <div class="service-side">
+              <img
+                src="../../Assets/Images/todoist.png"
+                class="service-logo"
+                alt="Todoist"
+              />
+              <span class="service-price">Grátis (pago opcional)</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://clickup.com">
+          <div class="service-line">
+            <div class="service-info">
+              <h3 class="service-name">ClickUp | 9/10</h3>
+              <p class="service-desc">
+                Gestão de projetos com tarefas, metas e dashboards
+              </p>
+            </div>
+            <div class="service-side">
+              <img
+                src="../../Assets/Images/clickup.png"
+                class="service-logo"
+                alt="ClickUp"
+              />
+              <span class="service-price">Grátis (pago opcional)</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="https://www.evernote.com">
+          <div class="service-line">
+            <div class="service-info">
+              <h3 class="service-name">Evernote | 7/10</h3>
+              <p class="service-desc">
+                Notas rápidas, listas de tarefas e organização pessoal
+              </p>
+            </div>
+            <div class="service-side">
+              <img
+                src="../../Assets/Images/evernote.png"
+                class="service-logo"
+                alt="Evernote"
+              />
+              <span class="service-price"
+                >Grátis (limitado): Apenas 2 dispositivos, 60 MB de
+                upload/mês.</span
+              >
+            </div>
+          </div>
+        </a>
+      </div>
+      <h6 class="small-info">
+        *Alem dos 5 iniciais, nenhum serviço que o usuario coloca aparece para
+        os outros, por ser um site sem API e Backend
+      </h6>
+    </section>
+
+    <section>
+      <div class="study-widget">
+        <button class="study-popup-btn" onclick="toggleStudyPopup()">📚</button>
+
+        <!-- Popup -->
+        <div class="study-popup-box" id="studyPopup">
+          <h1>📚 Descubra sua Lição Recomendada</h1>
+          <p class="subtitulo">
+            Escolha uma matéria e o nível para receber uma sugestão.
+          </p>
+
+          <form> <!--popup-->
+            <label for="materiaPopup">Matéria:</label>
+            <select id="materiaPopup">
+              <option value="">-- Escolha --</option>
+              <option value="matematica">Matemática</option>
+              <option value="portugues">Português</option>
+              <option value="historia">História</option>
+              <option value="geografia">Geografia</option>
+              <option value="ciencias">Ciências</option>
+              <option value="fisica">Física</option>
+              <option value="quimica">Química</option>
+              <option value="biologia">Biologia</option>
+              <option value="sociologia">Sociologia</option>
+              <option value="filosofia">Filosofia</option>
+              <option value="ingles">Inglês</option>
+              <option value="educacao">Educação Física</option>
+              <option value="artes">Artes</option>
+            </select>
+
+            <label for="nivelPopup">Nível:</label>
+            <select id="nivelPopup">
+              <option value="">-- Escolha --</option>
+              <option value="fundamental1">Fundamental 1</option>
+              <option value="fundamental2">Fundamental 2</option>
+              <option value="ensinoMedio">Ensino Médio</option>
+              <option value="faculdade">Faculdade</option>
+            </select>
+
+            <button
+              type="button"
+              class="study-popup-action"
+              onclick="gerarRecomendacaoPopup()"
+            >
+              Obter Recomendação
+            </button>
+          </form>
+
+          <div id="resultadoPopup" class="study-popup-result"></div>
         </div>
       </div>
-    </a>
+    </section>
 
-    <a href="https://notion.so">
-      <div class="service-line">
-        <div class="service-info">
-          <h3 class="service-name">Notion | 10/10</h3>
-          <p class="service-desc">Blocos para notas, tarefas, calendários e muito mais</p>
-        </div>
-        <div class="service-side">
-          <img src="../../Assets/Images/notion.png" class="service-logo" alt="Notion">
-          <span class="service-price">Grátis (pago opcional)</span>
-        </div>
+    <footer>
+      <div class="custom-container custom-row">
+        <span class="tiny">2025 StudyOne. Feito no HackTeen.</span>
+        <span class="tiny"></span>
       </div>
-    </a>
+    </footer>
 
-    <a href="https://todoist.com">
-      <div class="service-line">
-        <div class="service-info">
-          <h3 class="service-name">Todoist | 8/10</h3>
-          <p class="service-desc">Lista de tarefas simples com prazos e prioridades</p>
-        </div>
-        <div class="service-side">
-          <img src="../../Assets/Images/todoist.png" class="service-logo" alt="Todoist">
-          <span class="service-price">Grátis (pago opcional)</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://clickup.com">
-      <div class="service-line">
-        <div class="service-info">
-          <h3 class="service-name">ClickUp | 9/10</h3>
-          <p class="service-desc">Gestão de projetos com tarefas, metas e dashboards</p>
-        </div>
-        <div class="service-side">
-          <img src="../../Assets/Images/clickup.png" class="service-logo" alt="ClickUp">
-          <span class="service-price">Grátis (pago opcional)</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://www.evernote.com">
-      <div class="service-line">
-        <div class="service-info">
-          <h3 class="service-name">Evernote | 7/10</h3>
-          <p class="service-desc">Notas rápidas, listas de tarefas e organização pessoal</p>
-        </div>
-        <div class="service-side">
-          <img src="../../Assets/Images/evernote.png" class="service-logo" alt="Evernote">
-          <span class="service-price">Grátis (limitado): Apenas 2 dispositivos, 60 MB de upload/mês.</span>
-        </div>
-      </div>
-    </a>
-  </div>
-  <h6 class="small-info">*Alem dos 5 iniciais, nenhum serviço que o usuario coloca aparece para os outros, por ser um site sem API e Backend</h6>
-</section>
-
-<section>
-  <div class="study-widget">
-  
-  <button class="study-popup-btn" onclick="toggleStudyPopup()">📚</button>
-
-  <!-- Popup -->
-  <div class="study-popup-box" id="studyPopup">
-    <h1>📚 Descubra sua Lição Recomendada</h1>
-    <p class="subtitulo">Escolha uma matéria e o nível para receber uma sugestão.</p>
-
-    <form id="formRecomendacaoPopup">
-      <label for="materiaPopup">Matéria:</label>
-      <select id="materiaPopup">
-        <option value="">-- Escolha --</option>
-        <option value="matematica">Matemática</option>
-        <option value="portugues">Português</option>
-        <option value="historia">História</option>
-        <option value="geografia">Geografia</option>
-        <option value="ciencias">Ciências</option>
-        <option value="fisica">Física</option>
-        <option value="quimica">Química</option>
-        <option value="biologia">Biologia</option>
-        <option value="sociologia">Sociologia</option>
-        <option value="filosofia">Filosofia</option>
-        <option value="ingles">Inglês</option>
-        <option value="educacao">Educação Física</option>
-        <option value="artes">Artes</option>
-      </select>
-
-      <label for="nivelPopup">Nível:</label>
-      <select id="nivelPopup">
-        <option value="">-- Escolha --</option>
-        <option value="fundamental1">Fundamental 1</option>
-        <option value="fundamental2">Fundamental 2</option>
-        <option value="ensinoMedio">Ensino Médio</option>
-        <option value="faculdade">Faculdade</option>
-      </select>
-
-      <button type="button" class="study-popup-action" onclick="gerarRecomendacaoPopup()">Obter Recomendação</button>
-    </form>
-
-    <div id="resultadoPopup" class="study-popup-result"></div>
-  </div>
-</div>
-</section>
-    
-
-<footer>
-    <div class="custom-container custom-row">
-      <span class="tiny">2025 StudyOne. Feito no HackTeen.</span>
-      <span class="tiny"></span>
-    </div>
-  </footer>
-  
-<script src="../../Assets/js/servic_yt.js"></script>
-<script src="../../Assets/js/calc_e_popup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="../../Assets/js/servic_yt.js"></script>
+    <script src="../../Assets/js/calc_e_popup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

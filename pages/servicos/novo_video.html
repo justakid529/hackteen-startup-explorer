@@ -1,122 +1,183 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adicionar Link do YouTube</title>
-  <link rel="stylesheet" href="../../Assets/css/stylesheet.css">
-  <link rel="icon" href="Assets/Images/ChatGPT Image 4 de set. de 2025, 22_58_43.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark text-white">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="../../index.html">
-        <div class="logo" aria-hidden="true"></div>
-        <span> StudyOne</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link not-dropdown" href="../servicos.html">Ferramentas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link not-dropdown" href="../sobre.html">Sobre Nós</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link not-dropdown" href="../contato.html">Contato</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link not-dropdown navlink-selected" href="../conscientizacao.html">Conscientização</a>
-          </li>
-        </ul>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar Link do YouTube</title>
+    <link rel="stylesheet" href="../../Assets/css/stylesheet.css" />
+    <link
+      rel="icon"
+      href="Assets/Images/ChatGPT Image 4 de set. de 2025, 22_58_43.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-gradient-dark text-white"
+      >
+        <div class="container">
+          <a
+            class="navbar-brand d-flex align-items-center"
+            href="../../index.html"
+          >
+            <div class="logo" aria-hidden="true"></div>
+            <span> StudyOne</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Abrir menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link not-dropdown" href="../servicos.html"
+                  >Ferramentas</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link not-dropdown" href="../sobre.html"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link not-dropdown" href="../contato.html"
+                  >Contato</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link not-dropdown"
+                  href="../conscientizacao.html"
+                  >Conscientização</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-4">
+      <h2 class="services-title">Adicionar Link do YouTube</h2>
+      <form class="service-form" id="youtubeForm">
+        <label for="titulo">Título do Vídeo:</label>
+        <input
+          type="text"
+          name="titulo"
+          id="titulo"
+          placeholder="Ex: Aula de Matemática"
+          maxlength="50"
+          required
+        />
+
+        <label for="nota">Nota (0 a 10):</label>
+        <input
+          type="number"
+          name="nota"
+          id="nota"
+          min="0"
+          max="10"
+          placeholder="Ex: 8"
+          required
+        />
+
+        <label for="descricao">Descrição:</label>
+        <textarea
+          name="descricao"
+          id="descricao"
+          placeholder="Descreva o conteúdo do vídeo"
+          minlength="20"
+          maxlength="60"
+          required
+        ></textarea>
+
+        <label for="link">Link do YouTube:</label>
+        <input
+          type="url"
+          name="link"
+          id="link"
+          placeholder="https://youtube.com/..."
+          required
+          pattern="https://.*"
+        />
+
+        <br /><br />
+        <button type="submit" class="main-btn">Salvar</button>
+      </form>
     </div>
-  </nav>
-</header>
 
-<div class="container mt-4">
-  <h2 class="services-title">Adicionar Link do YouTube</h2>
-  <form class="service-form" id="youtubeForm">
-    
-    <label for="titulo">Título do Vídeo:</label>
-    <input type="text" name="titulo" id="titulo" placeholder="Ex: Aula de Matemática" maxlength="50" required>
+    <section>
+      <div class="study-widget">
+        <button class="study-popup-btn" onclick="toggleStudyPopup()">📚</button>
 
-    <label for="nota">Nota (0 a 10):</label>
-    <input type="number" name="nota" id="nota" min="0" max="10" placeholder="Ex: 8" required>
+        <!-- Popup -->
+        <div class="study-popup-box" id="studyPopup">
+          <h1>📚 Descubra sua Lição Recomendada</h1>
+          <p class="subtitulo">
+            Escolha uma matéria e o nível para receber uma sugestão.
+          </p>
 
-    <label for="descricao">Descrição:</label>
-    <textarea name="descricao" id="descricao" placeholder="Descreva o conteúdo do vídeo" minlength="20" maxlength="60" required></textarea>
+          <form> <!--popup-->
+            <label for="materiaPopup">Matéria:</label>
+            <select id="materiaPopup">
+              <option value="">-- Escolha --</option>
+              <option value="matematica">Matemática</option>
+              <option value="portugues">Português</option>
+              <option value="historia">História</option>
+              <option value="geografia">Geografia</option>
+              <option value="ciencias">Ciências</option>
+              <option value="fisica">Física</option>
+              <option value="quimica">Química</option>
+              <option value="biologia">Biologia</option>
+              <option value="sociologia">Sociologia</option>
+              <option value="filosofia">Filosofia</option>
+              <option value="ingles">Inglês</option>
+              <option value="educacao">Educação Física</option>
+              <option value="artes">Artes</option>
+            </select>
 
-    <label for="link">Link do YouTube:</label>
-    <input type="url" name="link" id="link" placeholder="https://youtube.com/..." required pattern="https://.*">
+            <label for="nivelPopup">Nível:</label>
+            <select id="nivelPopup">
+              <option value="">-- Escolha --</option>
+              <option value="fundamental1">Fundamental 1</option>
+              <option value="fundamental2">Fundamental 2</option>
+              <option value="ensinoMedio">Ensino Médio</option>
+              <option value="faculdade">Faculdade</option>
+            </select>
 
-    <br><br>
-    <button type="submit" class="main-btn">Salvar</button>
-  </form>
-</div>
+            <button
+              type="button"
+              class="study-popup-action"
+              onclick="gerarRecomendacaoPopup()"
+            >
+              Obter Recomendação
+            </button>
+          </form>
 
-<section>
-  <div class="study-widget">
-  
-  <button class="study-popup-btn" onclick="toggleStudyPopup()">📚</button>
+          <div id="resultadoPopup" class="study-popup-result"></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Popup -->
-  <div class="study-popup-box" id="studyPopup">
-    <h1>📚 Descubra sua Lição Recomendada</h1>
-    <p class="subtitulo">Escolha uma matéria e o nível para receber uma sugestão.</p>
+    <footer class="mt-4">
+      <div class="custom-container custom-row">
+        <span class="tiny">2025 StudyOne. Feito no HackTeen.</span>
+      </div>
+    </footer>
 
-    <form id="formRecomendacaoPopup">
-      <label for="materiaPopup">Matéria:</label>
-      <select id="materiaPopup">
-        <option value="">-- Escolha --</option>
-        <option value="matematica">Matemática</option>
-        <option value="portugues">Português</option>
-        <option value="historia">História</option>
-        <option value="geografia">Geografia</option>
-        <option value="ciencias">Ciências</option>
-        <option value="fisica">Física</option>
-        <option value="quimica">Química</option>
-        <option value="biologia">Biologia</option>
-        <option value="sociologia">Sociologia</option>
-        <option value="filosofia">Filosofia</option>
-        <option value="ingles">Inglês</option>
-        <option value="educacao">Educação Física</option>
-        <option value="artes">Artes</option>
-      </select>
-
-      <label for="nivelPopup">Nível:</label>
-      <select id="nivelPopup">
-        <option value="">-- Escolha --</option>
-        <option value="fundamental1">Fundamental 1</option>
-        <option value="fundamental2">Fundamental 2</option>
-        <option value="ensinoMedio">Ensino Médio</option>
-        <option value="faculdade">Faculdade</option>
-      </select>
-
-      <button type="button" class="study-popup-action" onclick="gerarRecomendacaoPopup()">Obter Recomendação</button>
-    </form>
-
-    <div id="resultadoPopup" class="study-popup-result"></div>
-  </div>
-</div>
-</section>
-    
-
-<footer class="mt-4">
-  <div class="custom-container custom-row">
-    <span class="tiny">2025 StudyOne. Feito no HackTeen.</span>
-  </div>
-</footer>
-
-<script src="../../Assets/js/servic_yt.js"></script>
-<script src="../../Assets/js/calc_e_popup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    <script src="../../Assets/js/servic_yt.js"></script>
+    <script src="../../Assets/js/calc_e_popup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
