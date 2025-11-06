@@ -9,3 +9,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+section {
+  padding: 36px 0;
+}
