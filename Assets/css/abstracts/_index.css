@@ -1,5 +1,4 @@
-@layer reset, base, layout, components, utilities;
+@layer reset, base, layout, components, utilities, pages;
 
-@import url('./_variables.css') layer(base);
-@import url('./_functions.css') layer(base);
-@import url('./_mixins.css') layer(base);
+@import url('./_variables.css');
+@import url('./_mixins.css');

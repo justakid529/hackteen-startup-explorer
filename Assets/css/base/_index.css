@@ -1,5 +1,4 @@
-@layer reset, base, layout, components, utilities;
+@layer reset, base, layout, components, utilities, pages;
 
-@import url('./_reset.css') layer(base);
-@import url('./_typography.css') layer(base);
+@import url('./_reset.css') layer(reset);
 @import url('./_base.css') layer(base);

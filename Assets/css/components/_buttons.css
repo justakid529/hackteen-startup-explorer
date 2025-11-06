@@ -1,0 +1,90 @@
+/* Hero */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #12182a;
+  color: #dfe9fb;
+  font-weight: 600;
+  margin-top: 95px;
+}
+.btn.primary {
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: #06101a;
+  font-weight: 600;
+}
+
+/* Services */
+
+.main-btn {
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: #06101a;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.main-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 140, 255, 0.35);
+}
+.grey-btn {
+  background: var(--custom-muted);
+  color: #06101a;
+  padding: 10px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Responsividade */
+
+.btn-voltar {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.btn-voltar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+}
+.btn-audio {
+  margin-top: 0px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+.btn-audio svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  display: block;
+  padding-right: 4px;
+  scale: 1.3;
+}
+
+/* Calculadora */
+
+.calc-btn {
+  align-self: flex-start;
+  padding: 10px 18px;
+}

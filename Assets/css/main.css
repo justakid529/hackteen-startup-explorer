@@ -1,4 +1,8 @@
-@layer reset, base, layout, components, utilities;
+@layer reset, base, layout, components, utilities, pages;
 
-@import url('./abstracts/_index.css') layer(base);
+@import url('./abstracts/_index.css');
 @import url('./base/_index.css') layer(base);
+@import url('./layout/_index.css') layer(layout);
+@import url('./components/_index.css') layer(components);
+@import url('./utilities/_index.css') layer(utilities);
+@import url('./pages/_index.css') layer(pages);
