@@ -1,0 +1,11 @@
+footer {
+  padding: 36px 0 56px;
+  color: #8ba0bb;
+}
+footer .custom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}

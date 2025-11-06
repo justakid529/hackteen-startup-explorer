@@ -1,0 +1,99 @@
+/* Escopo isolado */
+
+.study-widget .study-popup-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #051018;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.study-widget .study-popup-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+.study-widget .study-popup-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: var(--card);
+  padding: 28px 22px;
+  border-radius: var(--radius-lg);
+  max-width: 360px;
+  width: auto;
+  box-shadow: var(--shadow);
+  z-index: 999;
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.study-widget .study-popup-box.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+.study-widget .study-popup-box h1 {
+  font-size: 20px;
+  color: var(--brand-2);
+  margin-bottom: 8px;
+  text-align: center;
+}
+.study-widget .study-popup-box .subtitulo {
+  color: var(--custom-muted);
+  font-size: 14px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.study-widget .study-popup-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+}
+.study-widget .study-popup-box select {
+  width: 100%;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+  margin-bottom: 18px;
+  background: #1a1f2e;
+  color: var(--text);
+}
+.study-widget .study-popup-box .study-popup-action {
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  color: #06101a;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.study-widget .study-popup-box .study-popup-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(108, 140, 255, 0.35);
+}
+.study-widget .study-popup-result {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  background: #0f1526;
+  display: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brand-2);
+  text-align: center;
+}

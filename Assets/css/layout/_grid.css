@@ -1,0 +1,22 @@
+.grid {
+  display: grid;
+  gap: 16px;
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.nv-grid {
+  display: grid;
+  gap: 2rem;
+
+  margin-top: 2rem;
+}
+.nv-grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.nv-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}

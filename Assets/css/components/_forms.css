@@ -1,0 +1,19 @@
+/* Services */
+
+.Select1 {
+  background-color: var(--soft);
+  color: var(--text);
+  outline: #0a162a;
+  border: #1a2236;
+}
+
+/* Calculadora */
+
+.calc-input {
+  padding: 10px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #1a2236;
+  color: var(--text);
+  font-size: 15px;
+}
