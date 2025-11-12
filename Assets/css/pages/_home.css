@@ -220,6 +220,14 @@ header {
   color: var(--text);
 }
 
+.small-info {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: var(--custom-muted);
+}
+
 .service-card {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -276,6 +284,12 @@ header {
   gap: 20px;
   margin-top: 20px;
   justify-content: center;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .cta-band {
