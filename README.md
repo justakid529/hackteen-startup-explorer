@@ -33,12 +33,11 @@ O StudyOne não é apenas uma ferramenta, mas sim **uma ponte entre o estudante 
 ## 🦥 Acesso ao Site Online
 
 
-
-## ⚙️ Instruções de Setup  
-
 Para Acessar o Site em um modo online, acesse o link abaixo:
 
 https://studyone.netlify.app
+
+## ⚙️ Instruções de Setup  
 
 Para utilizar o projeto localmente, siga os passos abaixo:  
 
