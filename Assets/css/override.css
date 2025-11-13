@@ -250,3 +250,26 @@
   color: var(--brand-2);
   text-align: center;
 }
+
+.not-dropdown:hover {
+  background: rgba(255, 255, 255, .06);
+  color: var(--text);
+}
+
+.cta-band1 {
+  margin: 28px auto;
+  padding: 20px;
+  max-height: 180px;
+  background: linear-gradient(
+    90deg,
+    rgba(60, 61, 66, 0.2),
+    rgba(0, 156, 177, 0.2)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
