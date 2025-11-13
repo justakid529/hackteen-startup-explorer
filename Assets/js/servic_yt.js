@@ -13,10 +13,15 @@ document
     const nota = parseFloat(document.getElementById("nota").value);
     const link = document.getElementById("link").value.trim();
     const logo = document.getElementById("logo").value.trim();
+    const label = document.getElementById("label").value.trim();
 
     // === Validação ===
     if (nome.length === 0 || nome.length > 20) {
       alert("O nome deve ter no máximo 20 caracteres.");
+      return;
+    }
+    if (label.length === 0 || label.length > 40) {
+      alert("O aria label deve ter no máximo 40 caracteres.");
       return;
     }
     if (isNaN(nota) || nota < 0 || nota > 10) {
@@ -42,7 +47,7 @@ document
       return;
     }
 
-    const novoServico = { nome, descricao, preco, nota, link, logo };
+    const novoServico = { nome, descricao, preco, nota, link, logo, label };
     let lista = JSON.parse(localStorage.getItem(chave)) || [];
     lista.push(novoServico);
     localStorage.setItem(chave, JSON.stringify(lista));
@@ -136,7 +141,7 @@ function carregarServicos(categoria) {
           <p class="service-desc">${servico.descricao}</p>
         </div>
         <div class="service-side">
-          <img src="${servico.logo}" class="service-logo" alt="${servico.nome}">
+          <img src="${servico.logo}" class="service-logo" alt="${servico.label} aria-label="${servico.label}">
           <span class="service-price">${servico.preco}</span>
         </div>
       `;
